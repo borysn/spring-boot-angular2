@@ -3,10 +3,12 @@ Spring Boot with Angular2, TypeScript, and Sass.
 
 Gradle build system.
 
+# pre isntall
+1. install ruby with sass gem
+2. (optional) install gradle
+    - otherwise just use ./gradlew
+
 # install
-
-***Must have ruby installed with sass gem prior**
-
 `git clone git@github.com:borysn/spring-boot-angular2`
 
 # build & run
