@@ -17,7 +17,7 @@ Gradle build system.
 * `gradle npminstall`
 * `gradle grunt_build`
 * `gradle bootRun`
-* `localhost:8080`
+* using browser, navigate to`localhost:8080`
 
 # front-end dev
 * `gradle grunt_watch`
