@@ -11,6 +11,7 @@ dump.rdb
 bin/
 build/
 gradle/
+.gradle/
 npm-debug.log
 
 # OS generated files 
