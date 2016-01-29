@@ -17,6 +17,9 @@ Gradle build system.
 * `gradle grunt_build`
 * `gradle bootRun`
 
+# front-end dev
+* `gradle grunt_watch`
+    - watch html, ts, sass files in `src/main/webwork/` for changes 
 # issues
 1. Gradle build fails at `ts:dev`
     - tsc throws errors
