@@ -4,8 +4,9 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 Gradle build system.
 
 # pre isntall
+1. OpenJDK8
 1. install ruby with sass gem
-2. (optional) install gradle
+1. (optional) install gradle
     - otherwise just use ./gradlew
 
 # install
