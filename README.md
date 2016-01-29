@@ -1,5 +1,5 @@
 # spring-boot-angular2
-Spring Boot with Angular2, TypeScript, and Sass.
+Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 
 Gradle build system.
 
