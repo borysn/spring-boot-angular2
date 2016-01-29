@@ -3,7 +3,7 @@
     "description": "Spring Boot with Angular2, Typescript, Sass",
     "private": true,
     "version": "0.0.1-SNAPSHOT",
-    "license": "ISC",
+    "license": "MIT",
     
     "dependencies": {
 		"bower": "~1.7.2",
