@@ -50,8 +50,8 @@ node {
 	version = '0.12.9'
 	npmVersion = '2.13.0'
 	download = true
-	workDir = file("src/main/webconfig/node")
-	nodeModulesDir = file("src/main/webconfig")
+	workDir = file("${project.projectDir}/src/main/webconfig/node")
+	nodeModulesDir = file("${project.projectDir}/src/main/webconfig")
 }
 
 // configure gradle-grunt-plugin
