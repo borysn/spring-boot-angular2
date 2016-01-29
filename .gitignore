@@ -8,6 +8,7 @@
 dump.rdb
 
 # gradle
+.gradle/
 bin/
 build/
 npm-debug.log
