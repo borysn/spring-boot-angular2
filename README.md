@@ -1,8 +1,6 @@
 # spring-boot-angular2
 Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 
-Gradle build system.
-
 # pre isntall
 1. OpenJDK8
 1. install ruby with sass gem
