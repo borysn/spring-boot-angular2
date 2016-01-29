@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>spring-boot-angular2</title>
+		<!-- libs -->
+		<script src="/js/lib/system.src.js"></script>
+		<script src="/js/lib/Rx.js"></script>
+		<script src="/js/lib/angular2-polyfills.js"></script>
+		<script src="/js/lib/angular2.dev.js"></script>
+		<!-- systemjs -->
+		<script>
+		      System.config({
+		        packages: {        
+		          app: {
+		            format: 'register',
+		            defaultExtension: 'js'
+		          }
+		        }
+		      });
+		      System.import('app/boot')
+		      	.then(null, console.error.bind(console));
+		</script>
+	</head>
+	<!-- display app -->
+	<body>
+		<spring-boot-angular2>Loading...</spring-boot-angular2>
+	</body>
+</html>

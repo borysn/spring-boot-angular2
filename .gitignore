@@ -1,0 +1,43 @@
+# Java Generated 
+*.class
+*.jar
+*.war
+*.ear
+
+# other
+dump.rdb
+
+# gradle
+bin/
+build/
+gradle/
+npm-debug.log
+
+# OS generated files 
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Spring Generated 
+.springBeans
+
+# Eclipse Generated 
+.classpath
+.project
+.settings/
+target/
+
+# Front End Dependency Generated
+src/main/webconfig/.sass-cache/
+src/main/webconfig/bower_components/
+src/main/webconfig/node/
+src/main/webconfig/node_modules/
+src/main/webconfig/npm-debug.log
+src/main/webapp/resources/
+src/main/resources/static/
+src/main/webwork/scss/.tmp/
+src/main/webwork/js/lib/
