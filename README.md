@@ -19,7 +19,7 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 
 # front-end dev
 * `gradle grunt_watch`
-    - watch html, ts, sass files in `src/main/webwork/` for changes 
+    - watch html, ts, scss files in `src/main/webwork/` for changes 
     
 # issues
 1. `gradle grunt_build` fails at `ts:dev`
