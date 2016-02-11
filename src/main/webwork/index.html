@@ -2,6 +2,7 @@
 	<head>
 		<title>spring-boot-angular2</title>
 		<!-- libs -->
+		<script src="/js/lib/es6-shim.min.js"></script>
 		<script src="/js/lib/system.src.js"></script>
 		<script src="/js/lib/Rx.js"></script>
 		<script src="/js/lib/angular2-polyfills.js"></script>
@@ -16,7 +17,7 @@
 		          }
 		        }
 		      });
-		      System.import('app/boot')
+		      System.import('app/main')
 		      	.then(null, console.error.bind(console));
 		</script>
 		<!-- style -->

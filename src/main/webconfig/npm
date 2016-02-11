@@ -1,2 +1,2 @@
 #!/bin/sh
-"node/node" "node/node_modules/npm/bin/npm-cli.js" "$@"
+"node/node-v5.6.0-linux-x64/bin/node" "node_modules/npm/bin/npm-cli.js" "$@"

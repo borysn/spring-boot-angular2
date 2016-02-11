@@ -52,7 +52,8 @@ module.exports = function(grunt) {
 						src: ['/angular2/bundles/angular2.dev.js',
 						      '/angular2/bundles/angular2-polyfills.js',
 						      '/systemjs/dist/system.src.js',
-						      '/rxjs/bundles/Rx.js'],
+						      '/rxjs/bundles/Rx.js',
+						      '/es6-shim/es6-shim.min.js'],
 						dest: '<%= project.webworkdir %>/js/lib/'
 					}]
 			},
