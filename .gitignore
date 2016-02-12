@@ -1,4 +1,4 @@
-# Java Generated 
+# Java Generated
 *.class
 *.jar
 *.war
@@ -13,7 +13,7 @@ bin/
 build/
 npm-debug.log
 
-# OS generated files 
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -22,22 +22,23 @@ npm-debug.log
 ehthumbs.db
 Thumbs.db
 
-# Spring Generated 
+# Spring Generated
 .springBeans
 
-# Eclipse Generated 
+# Eclipse Generated
 .classpath
 .project
 .settings/
 target/
 
 # Front End Dependency Generated
-src/main/webconfig/.sass-cache/
-src/main/webconfig/bower_components/
-src/main/webconfig/node/
-src/main/webconfig/node_modules/
-src/main/webconfig/npm-debug.log
-src/main/webapp/resources/
-src/main/resources/static/
+src/main/webwork/.sass-cache/
+src/main/webwork/bower_components/
+src/main/webwork/node/
+src/main/webwork/node_modules/
+src/main/webwork/npm-debug.log
+src/main/webwork/.tscache/
 src/main/webwork/scss/.tmp/
 src/main/webwork/js/lib/
+src/main/webapp/resources/
+src/main/resources/static/
