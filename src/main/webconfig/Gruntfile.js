@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 						dest: '<%= project.webworkdir %>/js/lib/'
 					}]
 			},
-			
+
 			// dist copy, copy necessary files for distribution
 			dist: {
 				files: [
@@ -122,16 +122,13 @@ module.exports = function(grunt) {
 			    //clean: true
 			}
 		},
-		
+
 		// typescript config
 		ts: {
 			dev: {
 				src: ['<%= project.webworkdir %>/app/**/*.ts'],
 				dest: '<%= project.webappdir %>/app/',
-				tsconfig: true,
-				options: {
-					fast: 'never'
-				}
+				tsconfig: 'tsconfig.json'
 			}
 		}
 
