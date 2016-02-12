@@ -26,5 +26,5 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
     - tsc throws errors
         1. `Cannot find module angular2/core`
         2. `Cannot find module angular2/platform/browser`
-
-* I have a grunt plugin task that executes the typescript compilation, ts:dev. This task fails, but still compiles the ts correctly, and the angular app runs. If anyone's up for it, I could use some help solving these errors.
+    - these errors can be resolved by moving the `src/main/webconfig/node_modules` directory to `src/main/webcwork/...`
+        - Though it's a solution, it's not the approach I have in mind. Should be resolvable through configuration.
