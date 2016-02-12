@@ -3,7 +3,7 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 
 # pre-install
 1. install OpenJDK8
-1. (optional) install gradle
+1. (optional) install gradle 2.9
     - otherwise just use ./gradlew
 
 # install
