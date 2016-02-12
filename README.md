@@ -13,7 +13,6 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 # build & run
 * `gradle build`
 * `gradle npminstall`
-    - if install fails at `tsd install`, see issues below
 * `gradle grunt_build`
 * `gradle bootRun`
 * using browser, navigate to`localhost:8080`
@@ -27,8 +26,5 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
     - tsc throws errors
         1. `Cannot find module angular2/core`
         2. `Cannot find module angular2/platform/browser`
-2. `gradle npminstall` fails at `tsd install`
-    - enter the `src/main/webconfig` directory and configure an npm helper script
-    - run `./npm install tsd` then re-run `gradle npminstall` from project root dir.
 
 * I have a grunt plugin task that executes the typescript compilation, ts:dev. This task fails, but still compiles the ts correctly, and the angular app runs. If anyone's up for it, I could use some help solving these errors.
