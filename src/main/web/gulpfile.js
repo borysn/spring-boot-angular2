@@ -22,7 +22,7 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/angular2/bundles/angular2-polyfills.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/angular2/http.dev.js')
+    gulp.src('./node_modules/angular2/bundles/http.dev.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/systemjs/dist/system.src.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
