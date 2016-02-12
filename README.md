@@ -19,12 +19,7 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 
 # front-end dev
 * `gradle grunt_watch`
-    - watch html, ts, scss files in `src/main/webwork/` for changes 
-    
+    - watch html, ts, scss files in `src/main/webwork/` for changes
+
 # issues
-1. `gradle grunt_build` fails at `ts:dev`, but the angular2 app still runs successfully.
-    - tsc throws errors
-        1. `Cannot find module angular2/core`
-        2. `Cannot find module angular2/platform/browser`
-    - these errors can be resolved by moving the `src/main/webconfig/node_modules` directory to `src/main/webcwork/...`
-        - Though it's a solution, it's not the approach I have in mind. Should be resolvable through configuration.
+TODO: Use github issue tracking
