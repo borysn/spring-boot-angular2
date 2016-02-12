@@ -1,4 +1,4 @@
-import {Injectable,Inject} from 'angular2/core';
+import {Injectable, Inject} from 'angular2/core';
 import {Http, Response} from 'angular2/http';
 
 import {Observable} from 'rxjs/Observable';
@@ -12,8 +12,7 @@ export class TestService {
 
     getTest() {
         return this.http.get('http://localhost:8080/test/get/json')
-            .map((res: Response) => res.json())
-            .catch(this.handleError);
+            .map(res => res.json()).catch(this.handleError);
     }
 
     handleError(error: any) {
