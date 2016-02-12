@@ -10,7 +10,7 @@ buildscript {
 
 plugins {
 	id "com.moowork.node" version "0.11"
-	id "com.moowork.grunt" version "0.11"
+	id "com.moowork.gulp" version "0.11"
 }
 
 apply plugin: 'java'
@@ -53,14 +53,15 @@ node {
 	version = '5.6.0'
 	npmVersion = '3.7.1'
 	download = true
-	workDir = file("${project.projectDir}/src/main/webwork/node")
-	nodeModulesDir = file("${project.projectDir}/src/main/webwork")
+	workDir = file("${project.projectDir}/src/main/web/node")
+	nodeModulesDir = file("${project.projectDir}/src/main/web")
 }
 
 // configure gradle-grunt-plugin
-grunt {
-	workDir = file("${project.projectDir}/src/main/webwork")
+gulp {
+	workDir = file("${project.projectDir}/src/main/web")
 	colors = true
+	bufferOutput = false
 }
 
 task wrapper(type: Wrapper) {

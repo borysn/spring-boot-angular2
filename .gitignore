@@ -32,13 +32,13 @@ Thumbs.db
 target/
 
 # Front End Dependency Generated
-src/main/webwork/.sass-cache/
-src/main/webwork/bower_components/
-src/main/webwork/node/
-src/main/webwork/node_modules/
-src/main/webwork/npm-debug.log
-src/main/webwork/.tscache/
-src/main/webwork/scss/.tmp/
-src/main/webwork/js/lib/
+src/main/web/.sass-cache/
+src/main/web/bower_components/
+src/main/web/node/
+src/main/web/node_modules/
+src/main/web/npm-debug.log
+src/main/web/.tscache/
+src/main/web/scss/.tmp/
+src/main/web/js/lib/
 src/main/webapp/resources/
 src/main/resources/static/
