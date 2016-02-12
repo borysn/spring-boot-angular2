@@ -3,7 +3,6 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 
 # pre-install
 1. install OpenJDK8
-1. install ruby with sass gem
 1. (optional) install gradle
     - otherwise just use ./gradlew
 
@@ -13,13 +12,13 @@ Spring Boot with Gradle, Angular2, TypeScript, and Sass.
 # build & run
 * `gradle build`
 * `gradle npminstall`
-* `gradle grunt_build`
+* `gradle gulp_build`
 * `gradle bootRun`
 * using browser, navigate to`localhost:8080`
 
 # front-end dev
-* `gradle grunt_watch`
-    - watch html, ts, scss files in `src/main/webwork/` for changes
+* `gradle gulp_watch`
+    - watch html, ts, sass files in `src/main/web` for changes
 
 # issues
 TODO: Use github issue tracking
