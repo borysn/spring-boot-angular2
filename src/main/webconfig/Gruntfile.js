@@ -123,6 +123,7 @@ module.exports = function(grunt) {
 			}
 		},
 		
+		// typescript config
 		ts: {
 			dev: {
 				src: ['<%= project.webworkdir %>/app/**/*.ts'],

@@ -23,6 +23,7 @@
         "tslint": "3.2.1",
         "grunt-ts": "~5.3.0-beta.3",
 
+        "tsd": "^0.6.5",
         "angular2": "2.0.0-beta.3",
 	    "systemjs": "0.19.6",
         "es6-promise": "^3.0.2",
