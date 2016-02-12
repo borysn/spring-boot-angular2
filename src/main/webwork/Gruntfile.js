@@ -13,12 +13,10 @@ module.exports = function(grunt) {
 		// project settings
 		project: {
 			webappdir: '../resources/static',
-			webworkdir: '../webwork',
-			nodemodulesdir: 'node_modules',
 
 			// sass to css
 			sass: {
-				cwd: '<%= project.webworkdir %>/scss',
+				cwd: 'scss',
 				src: '**/*.scss',
 				dest: '<%= project.webappdir %>/css',
 				ext: '.css'
@@ -48,13 +46,15 @@ module.exports = function(grunt) {
 						nonull: true,
 						expand: true,
 						flatten: true,
-						cwd: '<%= project.nodemodulesdir %>',
+						cwd: 'node_modules',
 						src: ['/angular2/bundles/angular2.dev.js',
 						      '/angular2/bundles/angular2-polyfills.js',
+	  						  '/angular2/bundles/http.dev.js',
 						      '/systemjs/dist/system.src.js',
+							  '/systemjs/dist/system-polyfills.js',
 						      '/rxjs/bundles/Rx.js',
 						      '/es6-shim/es6-shim.min.js'],
-						dest: '<%= project.webworkdir %>/js/lib/'
+						dest: 'js/lib/'
 					}]
 			},
 
@@ -65,8 +65,9 @@ module.exports = function(grunt) {
 					// (sass build/copy is part of a seperate task)
 					{
 						expand: true,
-						cwd: '<%= project.webworkdir %>',
-						src: [ '**/*', '!**/scss/**', '!**/app/**' ],
+						cwd: './',
+						src: [ './index.html',
+							   './js/lib/**'],
 						dest: '<%= project.webappdir %>'
 					}]
 			},
@@ -105,13 +106,19 @@ module.exports = function(grunt) {
 
 		// grunt-contrib-watch
 		watch: {
-			gruntfile: {
-				files: 'Gruntfile.js',
-				tasks: [ 'jshint:gruntfile' ]
-			},
-			src: {
-				files: [ '<%= project.webworkdir %>/**' ],
-				tasks: [ 'build' ]
+			js: {
+				files: [ 'js/**/*.js',
+			             'app/**/*.ts',
+					     'index.html',
+					     'Gruntfile.js',
+					     'tsconfig.json',
+					     'tslint.json',
+					     'scss/**/*.scss',
+					     '!js/lib/**' ],
+				tasks: [ 'build' ],
+				options: {
+					interrupt: true
+				}
 			}
 		},
 
@@ -126,7 +133,7 @@ module.exports = function(grunt) {
 		// typescript config
 		ts: {
 			dev: {
-				src: ['<%= project.webworkdir %>/app/**/*.ts'],
+				src: ['app/**/*.ts', '!typings/main/**', '!typings/main.d.ts'],
 				dest: '<%= project.webappdir %>/app/',
 				tsconfig: 'tsconfig.json'
 			}

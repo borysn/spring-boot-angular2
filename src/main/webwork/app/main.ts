@@ -1,6 +1,10 @@
+import {bootstrap}    from 'angular2/platform/browser';
+import {CORE_DIRECTIVES} from 'angular2/common';
+import {Http, Response} from 'angular2/http';
 
-///<reference path="../../webconfig/node_modules/angular2/platform/browser.d.ts"/>
-import {bootstrap}    from 'angular2/platform/browser'
-import {AppComponent} from './app.component'
+import {AppComponent} from './app.component';
+import {TestComponent} from './test.component';
+import {TestService} from './test.service';
 
 bootstrap(AppComponent);
+bootstrap(TestComponent, [Http, Response, TestService, CORE_DIRECTIVES]);

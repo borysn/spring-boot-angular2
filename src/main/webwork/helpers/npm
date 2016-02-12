@@ -1,0 +1,2 @@
+#!/bin/sh
+"../node/node-v5.6.0-linux-x64/node" "../node/node_modules/npm/bin/npm-cli.js" "$@"

@@ -1,4 +1,3 @@
-///<reference path="../../webconfig/node_modules/angular2/core.d.ts"/>
 import {Component} from 'angular2/core';
 
 @Component({
