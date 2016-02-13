@@ -11,12 +11,7 @@ export class TestService {
     constructor(@Inject(Http) private http: Http) {}
 
     getTest() {
-        return this.http.get('http://localhost:8080/test/get/json')
-            .map(res => res.json()).catch(this.handleError);
-    }
-
-    handleError(error: any) {
-        console.error(error);
-        return Observable.throw(error.json().error || 'Server error');
+        return this.http.get('/test/get/json')
+            .map((res:Response) => res.json());
     }
 }
