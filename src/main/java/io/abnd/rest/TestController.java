@@ -21,12 +21,12 @@ public class TestController {
 	@RequestMapping(value="/test/get/json", method=RequestMethod.GET, produces="application/json")
 	public String testGetJson() {
 		JsonObject jsonObject = new JsonObject();
-		JsobObject message = new JsobObject();
+		JsonObject message = new JsonObject();
 
 		String result = testService.test();
 
 		message.addProperty("message", "Hello, World!");
-		jsonObject.addProperty("test", message);
+		jsonObject.add("test", message);
 
 		return jsonObject.toString();
 	}

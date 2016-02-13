@@ -1,5 +1,6 @@
 import {Component, Inject} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
+import {Response} from 'angular2/http';
 import {TestService} from './test.service';
 
 @Component({
@@ -19,8 +20,8 @@ export class TestComponent {
 
     ngOnInit() {
         this.testService.getTest().subscribe(
-            res => {this.test = JSON.stringify(res)},
-            res => {this.message = res.message},
+            data => {this.test = JSON.stringify(data),
+                     this.message = data.test.message},
             () => console.log('../test/get/json returned: \n' + this.test)
         );
     }
