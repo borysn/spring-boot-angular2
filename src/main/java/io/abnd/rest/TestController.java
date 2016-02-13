@@ -25,7 +25,7 @@ public class TestController {
 
 		String result = testService.test();
 
-		message.addProperty("message", "Hello, World!");
+		message.addProperty("message", result);
 		jsonObject.add("test", message);
 
 		return jsonObject.toString();
