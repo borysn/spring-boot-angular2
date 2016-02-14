@@ -6,6 +6,7 @@ a starter project for prototyping restful applications with spring boot and angu
 
 ## pre-install
 1. install OpenJDK8
+    - set `JAVA_HOME` environment variable
 1. (optional) install gradle 2.9
     - otherwise just use ./gradlew
 
@@ -22,3 +23,9 @@ a starter project for prototyping restful applications with spring boot and angu
 ## front-end dev
 * `gradle gulp_watch`
     - watch html, ts, sass files in `src/main/web` for changes
+
+## issues
+* `gradle npminstall` fails on windows
+    - edit `build.gradle` to change node version
+        - find line `version = '5.6.0'`
+        - change to `version = '5.0.0'`
