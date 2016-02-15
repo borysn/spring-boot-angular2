@@ -24,6 +24,8 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/angular2/bundles/http.dev.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src('./node_modules/angular2/bundles/router.dev.js')
+        .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/systemjs/dist/system.src.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/systemjs/dist/system-polyfills.js')
@@ -37,18 +39,28 @@ gulp.task('libcopy', function() {
 // html copy
 gulp.task('htmlcopy', function() {
     // clean dest
-    del([staticDir + 'index.html'], {force:true}).then(paths => {
-        console.log('Deleted files and folders:\n', paths.join('\n'));
-    });
+    del([staticDir + 'index.html',
+         staticDir + 'app/**/*.html'], {force:true})
+         .then(paths => {
+            console.log('Deleted files and folders:\n', paths.join('\n'));
+        });
 
     // copy index
     gulp.src('./index.html')
         .pipe(gulp.dest(staticDir));
+
+    // copy angular templates
+    gulp.src('./app/**/*.html')
+        .pipe(gulp.dest(staticDir + 'app'));
 });
 
 // html watch
 gulp.task('htmlw', function() {
+    // watch index
     gulp.watch('./index.html', ['htmlcopy']);
+
+    // watch angular templates
+    gulp.watch('./app/**/*.html', ['htmlcopy']);
 });
 
 // sass compile
@@ -72,7 +84,7 @@ gulp.task('sassw', function() {
 // typescript compile
 gulp.task('tsc', function() {
     // clean dest
-    del([staticDir + 'app/*'], {force: true}).then(paths => {
+    del([staticDir + 'app/**/*.ts'], {force: true}).then(paths => {
         console.log('Deleted files and folders:\n', paths.join('\n'));
     });
 
@@ -85,14 +97,14 @@ gulp.task('tsc', function() {
 
 // typescript watch compile
 gulp.task('tscw', function() {
-    gulp.watch('./app/**/*.ts', ['tsc']);
+    gulp.watch(['./app/**/*.ts', './app/**/*.html'], ['htmlcopy', 'tsc']);
 });
 
 // build sass and ts, copy libs, copy html
-gulp.task('build', ['sass', 'tsc', 'libcopy', 'htmlcopy']);
+gulp.task('build', ['libcopy', 'htmlcopy', 'sass', 'tsc']);
 
 // watch sass, ts, and html
-gulp.task('watch', ['sassw', 'tscw', 'htmlw']);
+gulp.task('watch', ['sassw', 'htmlw', 'tscw']);
 
 // default
 gulp.task('default', ['build']);

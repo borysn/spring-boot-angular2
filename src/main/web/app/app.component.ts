@@ -1,8 +1,15 @@
 import {Component} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+
+import {TestComponent} from './test/test.component';
 
 @Component({
     selector: 'spring-boot-angular2',
-    template: '<h1>My First Angular 2 App</h1><div class="style-me"></div>'
+    template: '<router-outlet></router-outlet>',
+    directives: [ROUTER_DIRECTIVES]
 })
-
-export class AppComponent { }
+@RouteConfig([
+        { path: '/', as: 'TestComponent', component: TestComponent, useAsDefault: true},
+])
+export class AppComponent {
+}

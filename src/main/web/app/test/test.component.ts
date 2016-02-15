@@ -5,12 +5,10 @@ import {TestService} from './test.service';
 
 @Component({
     selector: 'test',
-    template: '<div><h3>JSON</h3><div>{{test}}</div></div>'+
-              '<div><h3>message</h3><div>{{message}}</div></div>',
+    templateUrl: 'app/test/test.component.html',
     providers: [TestService],
     directives: [CORE_DIRECTIVES]
 })
-
 export class TestComponent {
 
     private test: string;
