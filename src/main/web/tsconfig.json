@@ -9,7 +9,7 @@
       "removeComments": false,
       "noImplicitAny": false,
       "buildOnSave": false,
-      "compileOnSave": true
+      "compileOnSave": false
   },
 
   "exclude": [
