@@ -29,6 +29,7 @@ Thumbs.db
 .classpath
 .project
 .settings/
+.metadata/
 target/
 
 # Front End Dependency Generated
