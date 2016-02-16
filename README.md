@@ -29,3 +29,6 @@ a starter project for prototyping restful applications with spring boot and angu
     - edit `build.gradle` to change node version
         - find line `version = '5.6.0'`
         - change to `version = '5.0.0'`
+
+## license
+[MIT](/LICENSE)
