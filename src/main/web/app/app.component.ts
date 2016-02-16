@@ -9,7 +9,7 @@ import {TestComponent} from './test/test.component';
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-        { path: '/', as: 'TestComponent', component: TestComponent, useAsDefault: true},
+        { path: '/test', name: 'TestComponent', component: TestComponent, useAsDefault: true},
 ])
 export class AppComponent {
 }
