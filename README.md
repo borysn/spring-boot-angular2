@@ -1,8 +1,22 @@
-# spring-boot-angular2
-Spring Boot with Gradle, Angular2, TypeScript, and Sass
+# spring-boot-angular2 starter kit
+Spring Boot with Gradle, Gulp, Angular2, TypeScript, and Sass
 
-## description
-a starter project for prototyping restful applications with spring boot and angular2.
+## about
+a starter project for prototyping restful applications with spring boot and angular2. 
+
+## notes
+
+angular2 is still in beta. packages will be upgraded to the latest version (possibly beyond what angular.io is recommendeing for their starter project).
+
+angular2 can be implemeneted as a fornt-end application for many back end systems. this starter kit focuses on a basic application packed along side a basic java/spring boot backend. 
+
+## philosophy
+
+rolling release. why? i'm using this starter kit for testing purposes.
+
+## contribute
+
+if you have any input, or contributions, please share! this is a side project.
 
 ## pre-install
 1. install OpenJDK8
