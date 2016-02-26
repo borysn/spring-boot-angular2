@@ -4,16 +4,6 @@ Spring Boot with Gradle, Angular2, TypeScript, Sass, and a Gulp build.
 ## about
 a starter project for prototyping restful applications with spring boot and angular2.
 
-## notes
-
-angular2 is still in beta. packages will be upgraded to the latest version (possibly beyond what angular.io is recommending for their starter project).
-
-angular2 can be implemented as a front-end application for many back end systems. this starter kit focuses on a basic application packed along side a basic java/spring boot backend.
-
-## contribute
-
-if you have any input, or contributions, please share!
-
 ## pre-install
 1. install OpenJDK8
     - set `JAVA_HOME` environment variable
@@ -46,6 +36,16 @@ if you have any input, or contributions, please share!
 ## configuration
 * [build.gradle](build.gradle) gradle build configuration
 * [gulpfile.js](src/main/web/gulpfile.js) gulp configuration
+
+## notes
+
+angular2 is still in beta. packages will be upgraded to the latest version (possibly beyond what angular.io is recommending for their starter project).
+
+angular2 can be implemented as a front-end application for many back end systems. this starter kit focuses on a basic application packed along side a basic java/spring boot backend.
+
+## contribute
+
+if you have any input, or contributions, please share!
 
 ## license
 [MIT](/LICENSE)
