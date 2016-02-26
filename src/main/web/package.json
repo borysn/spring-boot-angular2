@@ -1,6 +1,6 @@
 {
     "name": "spring-boot-angular2",
-    "description": "Spring Boot with Angular2, Typescript, Sass",
+    "description": "Spring Boot with Angular2, Typescript, Sass, and a Gulp Build",
     "private": true,
     "version": "0.0.1-SNAPSHOT",
     "license": "MIT",
@@ -18,7 +18,7 @@
         "typescript": "^1.8.2",
         "typings": "^0.6.8",
         "angular2": "2.0.0-beta.7",
-	    "systemjs": "0.19.22",
+	    "systemjs": "0.19.23",
         "es6-promise": "^3.1.2",
 	    "es6-shim": "^0.34.4",
 	    "reflect-metadata": "0.1.3",
