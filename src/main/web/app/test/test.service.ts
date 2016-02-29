@@ -1,3 +1,5 @@
+'use strict';
+
 import {Injectable, Inject} from 'angular2/core';
 import {Http, Response} from 'angular2/http';
 

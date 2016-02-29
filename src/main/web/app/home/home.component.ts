@@ -1,3 +1,5 @@
+'use strict';
+
 import {Component} from 'angular2/core';
 import {RouterLink, RouteParams} from 'angular2/router';
 

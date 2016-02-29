@@ -1,3 +1,5 @@
+'use strict';
+
 import {Component, Inject} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {Response} from 'angular2/http';
