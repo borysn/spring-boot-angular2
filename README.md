@@ -4,6 +4,8 @@ Spring Boot with Gradle, Angular2, TypeScript, Sass, and a Gulp build.
 ## about
 a starter project for prototyping restful applications with spring boot and angular2.
 
+anuglar2 with es6 support.
+
 ## pre-install
 1. install OpenJDK8
     - set `JAVA_HOME` environment variable
