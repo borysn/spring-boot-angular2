@@ -19,7 +19,7 @@ anuglar2 with es6 support.
 `$ git clone git@github.com:borysn/spring-boot-angular2`
 
 ## build & run
-* `$ gradle build`
+* `$ gradle clean build`
 * `$ gradle npminstall`
 * `$ gradle gulp_build`
 * `$ gradle bootRun`
