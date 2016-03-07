@@ -33,8 +33,6 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/rxjs/bundles/Rx.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/es6-shim/es6-shim.min.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
 })
 
 // html copy
