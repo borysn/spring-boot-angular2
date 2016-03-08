@@ -33,12 +33,23 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src('./node_modules/rxjs/bundles/Rx.js')
         .pipe(gulp.dest(staticDir + 'js/lib'));
+
+    // copy jasmine-core dependencies
+    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/jasmine.css')
+        .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/jasmine.js')
+        .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js')
+        .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/boot.js')
+        .pipe(gulp.dest(staticDir + 'js/lib'));
 })
 
 // html copy
 gulp.task('htmlcopy', function() {
     // clean dest
     del([staticDir + 'index.html',
+         staticDir + 'jasmine/**/*.html',
          staticDir + 'app/**/*.html'], {force:true})
          .then(paths => {
             console.log('Deleted files and folders:\n', paths.join('\n'));
@@ -47,6 +58,10 @@ gulp.task('htmlcopy', function() {
     // copy index
     gulp.src('./index.html')
         .pipe(gulp.dest(staticDir));
+
+    // copy unit-test html
+    gulp.src('./jasmine/**/*.html')
+        .pipe(gulp.dest(staticDir + 'jasmine'));
 
     // copy angular templates
     gulp.src('./app/**/*.html')
@@ -60,6 +75,9 @@ gulp.task('htmlw', function() {
 
     // watch angular templates
     gulp.watch('./app/**/*.html', ['htmlcopy']);
+
+    // watch tests for changes
+    gulp.watch('./jasmine/**/*.html', ['htmlcopy']);
 });
 
 // sass compile
@@ -82,8 +100,13 @@ gulp.task('sassw', function() {
 
 // typescript compile
 gulp.task('tsc', function() {
-    // clean dest
-    del([staticDir + 'app/**/*.ts'], {force: true}).then(paths => {
+    // clean src dest
+    del([staticDir + 'app/**/*.js'], {force: true}).then(paths => {
+        console.log('Deleted files and folders:\n', paths.join('\n'));
+    });
+
+    // clean test dest
+    del([staticDir + 'jasmine/**/*.js'], {force: true}).then(paths => {
         console.log('Deleted files and folders:\n', paths.join('\n'));
     });
 
@@ -96,7 +119,10 @@ gulp.task('tsc', function() {
 
 // typescript watch compile
 gulp.task('tscw', function() {
-    gulp.watch(['./app/**/*.ts', './app/**/*.html'], ['htmlcopy', 'tsc']);
+    gulp.watch(['./app/**/*.ts',
+                './app/**/*.html',
+                './jasmine/**/*.ts'], 
+                ['htmlcopy', 'tsc']);
 });
 
 // build sass and ts, copy libs, copy html
