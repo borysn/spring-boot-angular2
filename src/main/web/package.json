@@ -34,6 +34,8 @@
         "gulp-typescript": "2.11.0",
         "del": "2.2.0",
 
+        "jasmine-core": "2.4.1",
+
         "concurrently": "^2.0.0",
         "lite-server": "^2.1.0"
     }

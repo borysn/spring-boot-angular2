@@ -3,7 +3,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {TestComponent} from './test/test.component';
+import {HelloComponent} from './hello/hello.component';
 import {HomeComponent} from './home/home.component';
 
 @Component({
@@ -12,9 +12,9 @@ import {HomeComponent} from './home/home.component';
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-        {path: '/home', name: 'Home', component: HomeComponent},
-        {path: '/test', name: 'Test', component: TestComponent},
-        {path: '/**', redirectTo: ['Home']}
+        {path: '/home', name: 'HomePage', component: HomeComponent},
+        {path: '/hello', name: 'HelloPage', component: HelloComponent},
+        {path: '/**', redirectTo: ['HomePage']}
 ])
 export class AppComponent {
 }
