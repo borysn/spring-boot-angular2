@@ -1,5 +1,5 @@
 # spring-boot-angular2 starter kit
-Spring Boot with Gradle, Angular2, TypeScript, Sass, and a Gulp build.
+Spring Boot with Angular2, TypeScript, Sass, Gradle, and Gulp.
 
 ## about
 a starter project for prototyping restful applications with spring boot and angular2.
@@ -38,9 +38,9 @@ anuglar2 with es6 support.
     - changes made in the static dir will be wiped with a gulp build
     - make your front-end build changes in the proper work directory `src/main/web`
 
-## configuration
-* [build.gradle](build.gradle) gradle build configuration
-* [gulpfile.js](src/main/web/gulpfile.js) gulp configuration
+## build configuration
+* [build.gradle](build.gradle)
+* [gulpfile.js](src/main/web/gulpfile.js)
 
 ## notes
 
