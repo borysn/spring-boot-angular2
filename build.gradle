@@ -50,8 +50,8 @@ eclipse {
 
 // configure gradle-node-plugin
 node {
-	version = '5.8.0'
-	npmVersion = '3.8.1'
+	version = '5.9.0'
+	npmVersion = '3.8.2'
 	download = true
 	workDir = file("${project.projectDir}/src/main/web/node")
 	nodeModulesDir = file("${project.projectDir}/src/main/web")
