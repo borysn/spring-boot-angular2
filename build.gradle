@@ -57,7 +57,7 @@ node {
 	nodeModulesDir = file("${project.projectDir}/src/main/web")
 }
 
-// configure gradle-grunt-plugin
+// configure gradle-gulp-plugin
 gulp {
 	workDir = file("${project.projectDir}/src/main/web")
 	colors = true
