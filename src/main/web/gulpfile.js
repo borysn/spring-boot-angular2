@@ -18,30 +18,22 @@ gulp.task('libcopy', function() {
         console.log('Deleted files and folders:\n', paths.join('\n'));
     });
 
-    // copy angular dependencies
-    gulp.src('./node_modules/angular2/bundles/angular2.dev.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/angular2/bundles/angular2-polyfills.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/angular2/bundles/http.dev.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/angular2/bundles/router.dev.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/systemjs/dist/system.src.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/systemjs/dist/system-polyfills.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/rxjs/bundles/Rx.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src([
+            // copy angular dependencies
+            './node_modules/angular2/bundles/angular2.dev.js',
+            './node_modules/angular2/bundles/angular2-polyfills.js',
+            './node_modules/angular2/bundles/http.dev.js',
+            './node_modules/angular2/bundles/router.dev.js',
+            './node_modules/systemjs/dist/system.src.js',
+            './node_modules/systemjs/dist/system-polyfills.js',
+            './node_modules/rxjs/bundles/Rx.js',
 
-    // copy jasmine-core dependencies
-    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/jasmine.css')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/jasmine.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js')
-        .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src('./node_modules/jasmine-core/lib/jasmine-core/boot.js')
+            // copy jasmine-core dependencies
+            './node_modules/jasmine-core/lib/jasmine-core/jasmine.css',
+            './node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
+            './node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
+            './node_modules/jasmine-core/lib/jasmine-core/boot.js'
+    ])
         .pipe(gulp.dest(staticDir + 'js/lib'));
 })
 
