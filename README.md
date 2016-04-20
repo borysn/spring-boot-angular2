@@ -42,6 +42,14 @@ anuglar2 with es6 support.
     - changes made in the static dir will be wiped with a gulp build
     - make your front-end build changes in the proper work directory `src/main/web`
 
+&nbsp;
+* adding frontend dependencies 
+    1. update `src/main/package.json`
+        - add necessary dependencies
+    1. update `src/main/gulpfile.js`
+        - add entry to copy dependencies to static
+    1. update `src/main/index.html`
+        - add links to external css/js
 
 ## build configuration
 * [build.gradle](build.gradle)
@@ -56,6 +64,10 @@ angular2 can be implemented as a front-end application for many back end systems
 ## contribute
 
 if you have any input, or contributions, please share!
+
+## todo
+
+the readme is getting a little tl;dr, i'll try and get the wiki going soon.
 
 ## license
 [MIT](/LICENSE)
