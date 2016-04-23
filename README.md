@@ -20,8 +20,6 @@ anuglar2 with es6 support.
 
 ## build & run
 * `$ gradle clean build`
-* `$ gradle npminstall`
-* `$ gradle gulp_build`
 * `$ gradle bootRun`
 * using browser, navigate to`localhost:8080`
 
