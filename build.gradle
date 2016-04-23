@@ -71,3 +71,7 @@ task wrapper(type: Wrapper) {
 bootRun {
 	addResources = true
 }
+
+// build front-end before making jar
+processResources.dependsOn npmInstall
+npmInstall.finalizedBy gulp_build
