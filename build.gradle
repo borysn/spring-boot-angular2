@@ -33,6 +33,8 @@ repositories {
 dependencies {
 	// spring
 	compile('org.springframework.boot:spring-boot-starter-web')
+	// spring dev tools
+	compile("org.springframework.boot:spring-boot-devtools")
 	// google gson
 	compile('com.google.code.gson:gson:2.6.2')
 
