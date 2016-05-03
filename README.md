@@ -12,7 +12,7 @@ anuglar2 with es6 support. unit tests with jasmine.
 
 1. install OpenJDK8
     - set `JAVA_HOME` environment variable
-1. (optional) install gradle 2.9
+1. (optional) install latest gradle
     - otherwise just use `$ ./gradlew`
 1. (optional) install python 2.7.x
     - set `PYTHON` environment variable
