@@ -121,7 +121,7 @@ gulp.task('tscw', function() {
 gulp.task('build', ['libcopy', 'htmlcopy', 'sass', 'tsc']);
 
 // watch sass, ts, and html
-gulp.task('watch', ['sassw', 'htmlw', 'tscw']);
+gulp.task('watch', ['build', 'sassw', 'htmlw', 'tscw']);
 
 // default
 gulp.task('default', ['build']);
