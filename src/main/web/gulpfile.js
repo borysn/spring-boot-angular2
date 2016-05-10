@@ -14,8 +14,10 @@ var staticDir = '../resources/static/';
 // lib copy
 gulp.task('libcopy', function() {
     // clean dest
-    del([staticDir + 'js/lib/*'], {force: true}).then(paths => {
-        console.log('Deleted files and folders:\n', paths.join('\n'));
+    del([staticDir + 'js/lib/*',
+         staticDir + 'css/lib/*'], {force: true})
+       .then(paths => {
+         console.log('Deleted files and folders:\n', paths.join('\n'));
     });
 
     // copy @angular, angular2-in-memory-web-api, and rxjs
@@ -33,11 +35,12 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'js/lib'));
 
     // copy jasmine-core dependencies
-    gulp.src(['./node_modules/jasmine-core/lib/jasmine-core/jasmine.css',
-              './node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
+    gulp.src(['./node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
               './node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
               './node_modules/jasmine-core/lib/jasmine-core/boot.js'])
         .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src(['./node_modules/jasmine-core/lib/jasmine-core/jasmine.css'])
+        .pipe(gulp.dest(staticDir + 'css/lib'));
 })
 
 // html/config copy
