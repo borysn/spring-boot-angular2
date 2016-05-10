@@ -44,6 +44,7 @@ gulp.task('libcopy', function() {
     gulp.src(['./node_modules/jquery/dist/jquery.min.js',
               './node_modules/tether/dist/js/tether.min.js',
               './node_modules/bootstrap/dist/js/bootstrap.min.js',
+              './node_modules/moment/min/moment.min.js',
               './node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js'])
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src(['./node_modules/tether/dist/css/tether.min.css',
