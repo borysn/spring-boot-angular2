@@ -13,12 +13,10 @@ var staticDir = '../resources/static/';
 
 // lib copy
 gulp.task('libcopy', function() {
-    // clean dest
-    del([staticDir + 'js/lib/*',
-         staticDir + 'css/lib/*'], {force: true})
-       .then(paths => {
-         console.log('Deleted files and folders:\n', paths.join('\n'));
-    });
+   // clean dest using sync
+   var deleted = del.sync([staticDir + 'js/lib/**',
+                            staticDir + 'css/lib/**'], {force: true});
+   console.log('Deleted files and folders:\n', deleted.join('\n'));
 
     // copy @angular, angular2-in-memory-web-api, and rxjs
     gulp.src(['./node_modules/@angular/**/*'])
@@ -41,6 +39,22 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'js/lib'));
     gulp.src(['./node_modules/jasmine-core/lib/jasmine-core/jasmine.css'])
         .pipe(gulp.dest(staticDir + 'css/lib'));
+
+    // copy bootstrap dependencies
+    gulp.src(['./node_modules/jquery/dist/jquery.min.js',
+              './node_modules/tether/dist/js/tether.min.js',
+              './node_modules/bootstrap/dist/js/bootstrap.min.js',
+              './node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js'])
+        .pipe(gulp.dest(staticDir + 'js/lib'));
+    gulp.src(['./node_modules/tether/dist/css/tether.min.css',
+              './node_modules/bootstrap/dist/css/bootstrap.min.css'])
+        .pipe(gulp.dest(staticDir + 'css/lib'));
+
+    // copy font-awesome
+    gulp.src(['./node_modules/font-awesome/css/font-awesome.min.css'])
+        .pipe(gulp.dest(staticDir + 'css/lib/font-awesome/css'));
+    gulp.src(['./node_modules/font-awesome/fonts/*'])
+        .pipe(gulp.dest(staticDir + 'css/lib/font-awesome/fonts'));
 })
 
 // html/config copy
