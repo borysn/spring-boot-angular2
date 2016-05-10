@@ -18,37 +18,41 @@ gulp.task('libcopy', function() {
         console.log('Deleted files and folders:\n', paths.join('\n'));
     });
 
-    gulp.src([
-            // copy angular dependencies
-            './node_modules/angular2/bundles/angular2.dev.js',
-            './node_modules/angular2/bundles/angular2-polyfills.js',
-            './node_modules/angular2/bundles/http.dev.js',
-            './node_modules/angular2/bundles/router.dev.js',
-            './node_modules/systemjs/dist/system.src.js',
-            './node_modules/systemjs/dist/system-polyfills.js',
-            './node_modules/rxjs/bundles/Rx.js',
+    // copy @angular, angular2-in-memory-web-api, and rxjs
+    gulp.src(['./node_modules/@angular/**/*'])
+        .pipe(gulp.dest(staticDir + 'js/lib/@angular'));
+    gulp.src(['./node_modules/angular2-in-memory-web-api/**/*'])
+        .pipe(gulp.dest(staticDir + 'js/lib/angular2-in-memory-web-api'));
+    gulp.src(['./node_modules/rxjs/**/*'])
+        .pipe(gulp.dest(staticDir + 'js/lib/rxjs'));
 
-            // copy jasmine-core dependencies
-            './node_modules/jasmine-core/lib/jasmine-core/jasmine.css',
-            './node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-            './node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
-            './node_modules/jasmine-core/lib/jasmine-core/boot.js'
-    ])
+    // copy @angular dependencies
+    gulp.src(['./node_modules/zone.js/dist/zone.js',
+              './node_modules/reflect-metadata/Reflect.js',
+              './node_modules/systemjs/dist/system.src.js'])
+        .pipe(gulp.dest(staticDir + 'js/lib'));
+
+    // copy jasmine-core dependencies
+    gulp.src(['./node_modules/jasmine-core/lib/jasmine-core/jasmine.css',
+              './node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
+              './node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
+              './node_modules/jasmine-core/lib/jasmine-core/boot.js'])
         .pipe(gulp.dest(staticDir + 'js/lib'));
 })
 
-// html copy
+// html/config copy
 gulp.task('htmlcopy', function() {
     // clean dest
     del([staticDir + 'index.html',
+         staticDir + 'systemjs.config.js',
          staticDir + 'jasmine/**/*.html',
          staticDir + 'app/**/*.html'], {force:true})
          .then(paths => {
             console.log('Deleted files and folders:\n', paths.join('\n'));
         });
 
-    // copy index
-    gulp.src('./index.html')
+    // copy index && systemjs cofnig
+    gulp.src(['./index.html', './systemjs.config.js'])
         .pipe(gulp.dest(staticDir));
 
     // copy unit-test html
@@ -62,8 +66,8 @@ gulp.task('htmlcopy', function() {
 
 // html watch
 gulp.task('htmlw', function() {
-    // watch index
-    gulp.watch('./index.html', ['htmlcopy']);
+    // watch index && systemjs config
+    gulp.watch(['./index.html', 'systemjs.config.js'], ['htmlcopy']);
 
     // watch angular templates
     gulp.watch('./app/**/*.html', ['htmlcopy']);
@@ -113,12 +117,12 @@ gulp.task('tsc', function() {
 gulp.task('tscw', function() {
     gulp.watch(['./app/**/*.ts',
                 './app/**/*.html',
-                './jasmine/**/*.ts'], 
+                './jasmine/**/*.ts'],
                 ['htmlcopy', 'tsc']);
 });
 
 // build sass and ts, copy libs, copy html
-gulp.task('build', ['libcopy', 'htmlcopy', 'sass', 'tsc']);
+gulp.task('build', ['htmlcopy', 'sass', 'tsc', 'libcopy']);
 
 // watch sass, ts, and html
 gulp.task('watch', ['build', 'sassw', 'htmlw', 'tscw']);

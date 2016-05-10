@@ -1,34 +1,25 @@
 <html>
 	<head>
 		<title>spring-boot-angular2</title>
+    <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 		<!-- style -->
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+		<!-- libs -->
+		<script src="/js/lib/zone.js"></script>
+		<script src="/js/lib/Reflect.js"></script>
+		<script src="/js/lib/system.src.js"></script>
+
+		<!-- systemjs config -->
+		<script src="systemjs.config.js"></script>
+		<script>
+			System.import('app/main').catch((err) => console.error(err));
+		</script>
 	</head>
 	<body>
 		<!-- display app -->
 		<spring-boot-angular2>Loading...</spring-boot-angular2>
-
-		<!-- libs -->
-		<script src="/js/lib/system-polyfills.js"></script>
-		<script src="/js/lib/angular2-polyfills.js"></script>
-		<script src="/js/lib/system.src.js"></script>
-		<script src="/js/lib/Rx.js"></script>
-		<script src="/js/lib/angular2.dev.js"></script>
-		<script src="/js/lib/router.dev.js"></script>
-		<script src="/js/lib/http.dev.js"></script>
-		<!-- systemjs -->
-		<script>
-		      System.config({
-		        packages: {
-		          'app': {
-		            format: 'register',
-		            defaultExtension: 'js'
-		          }
-		        }
-		      });
-		      System.import('app/main')
-		      	.then(null, console.error.bind(console));
-		</script>
 	</body>
 </html>
