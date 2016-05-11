@@ -1,10 +1,10 @@
 # spring-boot-angular2 starter kit
 
-Spring Boot with Angular2, TypeScript, Sass, Gradle, and Gulp.
+Spring Boot with Angular2, Bootstrap4, TypeScript, Sass, Gradle, and Gulp.
 
 ## about
 
-a starter project for prototyping restful applications with spring boot and angular2.
+a starter project for prototyping restful applications with spring boot, angular2, and bootstrap4.
 
 anuglar2 with es6 support. unit tests with jasmine.
 
