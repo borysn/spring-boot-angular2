@@ -2,11 +2,10 @@
 
 // require
 var gulp = require('gulp');
+var del = require('del');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
-var tsProject = ts.createProject('tsconfig.json',
-    {typescript: require('typescript')});
-var del = require('del');
+var tsProject = ts.createProject('tsconfig.json', {typescript: require('typescript')});
 
 // vars
 var staticDir = '../resources/static/';
@@ -15,7 +14,7 @@ var staticDir = '../resources/static/';
 gulp.task('libcopy', function() {
    // clean dest using sync
    var deleted = del.sync([staticDir + 'js/lib/**',
-                            staticDir + 'css/lib/**'], {force: true});
+                           staticDir + 'css/lib/**'], {force: true});
    console.log('Deleted files and folders:\n', deleted.join('\n'));
 
     // copy @angular, angular2-in-memory-web-api, and rxjs
@@ -65,9 +64,9 @@ gulp.task('htmlcopy', function() {
          staticDir + 'systemjs.config.js',
          staticDir + 'jasmine/**/*.html',
          staticDir + 'app/**/*.html'], {force:true})
-         .then(paths => {
-            console.log('Deleted files and folders:\n', paths.join('\n'));
-        });
+       .then(paths => {
+         console.log('Deleted files and folders:\n', paths.join('\n'));
+    });
 
     // copy index && systemjs cofnig
     gulp.src(['./index.html', './systemjs.config.js'])
@@ -85,7 +84,7 @@ gulp.task('htmlcopy', function() {
 // html watch
 gulp.task('htmlw', function() {
     // watch index && systemjs config
-    gulp.watch(['./index.html', 'systemjs.config.js'], ['htmlcopy']);
+    gulp.watch(['./index.html', './systemjs.config.js'], ['htmlcopy']);
 
     // watch angular templates
     gulp.watch('./app/**/*.html', ['htmlcopy']);
@@ -128,7 +127,7 @@ gulp.task('tsc', function() {
     var tsResult = tsProject.src().pipe(ts(tsProject));
 
     // copy
-	return tsResult.js.pipe(gulp.dest(staticDir));
+	  return tsResult.js.pipe(gulp.dest(staticDir));
 });
 
 // typescript watch compile
