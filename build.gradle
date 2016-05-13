@@ -85,3 +85,10 @@ bootRun {
 // build front-end before making jar
 processResources.dependsOn npmInstall
 npmInstall.finalizedBy gulp_build
+
+clean.doFirst {
+	final def webDir = "${rootDir}/src/main/web/"
+	delete "${webDir}/node/"
+	delete "${webDir}/node_modules/"
+	delete "${webDir}/typings/"
+}
