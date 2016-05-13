@@ -8,7 +8,7 @@ var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json', {typescript: require('typescript')});
 
 // vars
-var staticDir = '../resources/static/';
+var staticDir = '../../../build/generated-web-resources/static/';
 
 // lib copy
 gulp.task('libcopy', function() {

@@ -50,6 +50,14 @@ eclipse {
 	}
 }
 
+def generatedWebResources = "$buildDir/generated-web-resources"
+
+sourceSets {
+	main {
+		output.dir(generatedWebResources, builtBy: 'gulp_build')
+	}
+}
+
 // configure gradle-node-plugin
 node {
 	version = '6.1.0'

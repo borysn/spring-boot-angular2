@@ -32,6 +32,9 @@ Thumbs.db
 .metadata/
 target/
 
+# IntelliJ Generated
+.idea
+
 # Front End Dependency Generated
 src/main/web/.sass-cache/
 src/main/web/bower_components/
@@ -43,4 +46,3 @@ src/main/web/scss/.tmp/
 src/main/web/js/lib/
 src/main/web/typings/
 src/main/webapp/resources/
-src/main/resources/static/
