@@ -8,7 +8,7 @@
       "experimentalDecorators": true,
       "removeComments": false,
       "noImplicitAny": false,
-      "outDir": "../resources/static/app"
+      "outDir": "../../../build/generated-web-resources/static/app/"
   },
 
   "exclude": [

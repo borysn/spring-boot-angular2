@@ -50,6 +50,14 @@ eclipse {
 	}
 }
 
+def generatedWebResources = "$buildDir/generated-web-resources"
+
+sourceSets {
+	main {
+		output.dir(generatedWebResources, builtBy: 'gulp_build')
+	}
+}
+
 // configure gradle-node-plugin
 node {
 	version = '6.1.0'
@@ -77,3 +85,10 @@ bootRun {
 // build front-end before making jar
 processResources.dependsOn npmInstall
 npmInstall.finalizedBy gulp_build
+
+clean.doFirst {
+	final def webDir = "${rootDir}/src/main/web/"
+	delete "${webDir}/node/"
+	delete "${webDir}/node_modules/"
+	delete "${webDir}/typings/"
+}
