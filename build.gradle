@@ -29,7 +29,6 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	// spring
 	compile('org.springframework.boot:spring-boot-starter-web')
@@ -41,7 +40,6 @@ dependencies {
 	// testing
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
-
 
 eclipse {
 	classpath {
@@ -72,6 +70,10 @@ gulp {
 	workDir = file("${project.projectDir}/src/main/web")
 	colors = true
 	bufferOutput = false
+}
+
+task gulp_watch(type: GulpTask) {
+	args = ["watch"]
 }
 
 task wrapper(type: Wrapper) {
