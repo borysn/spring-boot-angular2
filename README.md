@@ -32,6 +32,10 @@ anuglar2 with es6 support. unit tests with jasmine.
 
 [wiki](https://github.com/borysn/spring-boot-angular2/wiki)
 
+## example
+
+Check out my [RVEP](https://gitlab.com/borysn/RVEP/tree/dev) project. It's built and updated according to this starter kit!
+
 ## contribute
 
 if you have any input, or contributions, please share!
