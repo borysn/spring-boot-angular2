@@ -34,7 +34,7 @@ anuglar2 with es6 support. unit tests with jasmine.
 
 ## example
 
-Check out my [RVEP](https://gitlab.com/borysn/RVEP/tree/dev) project. It's built and updated according to this starter kit!
+check out my [RVEP](https://gitlab.com/borysn/RVEP/tree/dev) project. it's built and updated according to this starter kit!
 
 ## contribute
 
