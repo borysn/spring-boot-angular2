@@ -5,6 +5,7 @@ buildscript {
 	dependencies {
 		// spring
 		classpath('org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE')
+		classpath('org.springframework:springloaded:1.2.6.RELEASE')
 	}
 }
 
@@ -18,34 +19,47 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
-jar {
-	baseName = 'spring-boot-angular2'
-	version = '0.0.1-SNAPSHOT'
-}
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 repositories {
 	mavenCentral()
-}
-
-dependencies {
-	// spring
-	compile('org.springframework.boot:spring-boot-starter-web')
-	// spring dev tools
-	compile("org.springframework.boot:spring-boot-devtools")
-	// google gson
-	compile('com.google.code.gson:gson:2.6.2')
-
-	// testing
-	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 eclipse {
 	classpath {
 		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+		 containers('org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8')
 	}
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file('$buildDir/classes/main/')
+    }
+}
+
+jar {
+	baseName = 'spring-boot-angular2'
+	version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+	dev
+}
+
+dependencies {
+	// spring
+	compile('org.springframework.boot:spring-boot-starter-web')
+	// google gson
+	compile('com.google.code.gson:gson:2.6.2')
+
+	// spring dev tools
+	dev('org.springframework.boot:spring-boot-devtools')
+
+	// testing
+	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
 def generatedWebResources = "$buildDir/generated-web-resources"
@@ -59,38 +73,48 @@ sourceSets {
 // configure gradle-node-plugin
 node {
 	version = '6.1.0'
-	npmVersion = '3.8.9'
+	npmVersion = '3.9.0'
 	download = true
-	workDir = file("${project.projectDir}/src/main/web/node")
+	workDir = file("$project.projectDir}/src/main/web/node")
 	nodeModulesDir = file("${project.projectDir}/src/main/web")
 }
 
-// configure gradle-gulp-plugin
+// configure gradle-grunt-plugin
 gulp {
-	workDir = file("${project.projectDir}/src/main/web")
+	workDir = file("${project.projectDir}/src/main/web");
 	colors = true
 	bufferOutput = false
 }
 
+// watch ts, sass, html files for changes and build
 task gulp_watch(type: GulpTask) {
-	args = ["watch"]
+    args = ['watch']
 }
 
+// gradle wrapper
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.13'
 }
 
+// clean node/node_modules/typings
+task npmClean(type: Delete) {
+	final def webDir = "${rootDir}/src/main/web"
+	delete "${webDir}/node"
+	delete "${webDir}/node_modules"
+	delete "${webDir}/typings"
+}
+
+// run spring boot app
 bootRun {
 	addResources = true
+	classpath = sourceSets.main.runtimeClasspath + configurations.dev
 }
 
+// ensure resources are processed before code is compiled
+compileJava.dependsOn(processResources);
 // build front-end before making jar
-processResources.dependsOn npmInstall
-npmInstall.finalizedBy gulp_build
+processResources.dependsOn(npmInstall)
+npmInstall.finalizedBy(gulp_build)
 
-clean.doFirst {
-	final def webDir = "${rootDir}/src/main/web/"
-	delete "${webDir}/node/"
-	delete "${webDir}/node_modules/"
-	delete "${webDir}/typings/"
-}
+// run npmClean before clean
+clean.dependsOn(npmClean)
