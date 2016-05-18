@@ -96,7 +96,7 @@ gulp.task('htmlw', function() {
 // sass compile
 gulp.task('sass', function() {
     // clean dest
-    del([staticDir + 'css/*'], {force: true}).then(paths => {
+    del([staticDir + 'css/*', '!' + staticDir + 'css/lib'], {force: true}).then(paths => {
         console.log('Deleted files and folders:\n', paths.join('\n'));
     });
 
