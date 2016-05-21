@@ -72,8 +72,8 @@ sourceSets {
 
 // configure gradle-node-plugin
 node {
-	version = '6.1.0'
-	npmVersion = '3.9.0'
+	version = '6.2.0'
+	npmVersion = '3.9.2'
 	download = true
 	workDir = file("${project.projectDir}/src/main/web/node")
 	nodeModulesDir = file("${project.projectDir}/src/main/web")
