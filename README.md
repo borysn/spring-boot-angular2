@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/borysn/spring-boot-angular2.svg?branch=master)](https://travis-ci.org/borysn/spring-boot-angular2)
+
 # spring-boot-angular2 starter kit
 
 Spring Boot with Angular2, Bootstrap4, TypeScript, Sass, Gradle, and Gulp.
