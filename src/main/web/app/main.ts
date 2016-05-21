@@ -7,6 +7,6 @@ import {LocationStrategy, HashLocationStrategy, APP_BASE_HREF} from '@angular/co
 import {AppComponent} from './app.component';
 
 bootstrap(AppComponent, [
-        provide(APP_BASE_HREF, {useValue: '/'}),
-        provide(LocationStrategy, {useClass: HashLocationStrategy})
-    ]).catch(err => console.error(err));
+    provide(APP_BASE_HREF, {useValue: '/#'}),
+    provide(LocationStrategy, {useClass: HashLocationStrategy})
+]).catch(err => console.error(err));
