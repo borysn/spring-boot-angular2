@@ -13,9 +13,8 @@ var staticDir = '../../../build/generated-web-resources/static/';
 // lib copy
 gulp.task('libcopy', function() {
    // clean dest using sync
-   var deleted = del.sync([staticDir + 'js/lib/**',
-                           staticDir + 'css/lib/**'], {force: true});
-   console.log('Deleted files and folders:\n', deleted.join('\n'));
+   del.sync([staticDir + 'js/lib/**',
+             staticDir + 'css/lib/**'], {force: true});
 
     // copy @angular, angular2-in-memory-web-api, and rxjs
     gulp.src(['./node_modules/@angular/**/*'])
@@ -55,7 +54,7 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'css/lib/font-awesome/css'));
     gulp.src(['./node_modules/font-awesome/fonts/*'])
         .pipe(gulp.dest(staticDir + 'css/lib/font-awesome/fonts'));
-})
+});
 
 // html/config copy
 gulp.task('htmlcopy', function() {
@@ -63,10 +62,7 @@ gulp.task('htmlcopy', function() {
     del([staticDir + 'index.html',
          staticDir + 'systemjs.config.js',
          staticDir + 'jasmine/**/*.html',
-         staticDir + 'app/**/*.html'], {force:true})
-       .then(paths => {
-         console.log('Deleted files and folders:\n', paths.join('\n'));
-    });
+         staticDir + 'app/**/*.html'], {force:true});
 
     // copy index && systemjs cofnig
     gulp.src(['./index.html', './systemjs.config.js'])
@@ -96,9 +92,7 @@ gulp.task('htmlw', function() {
 // sass compile
 gulp.task('sass', function() {
     // clean dest
-    del([staticDir + 'css/*', '!' + staticDir + 'css/lib'], {force: true}).then(paths => {
-        console.log('Deleted files and folders:\n', paths.join('\n'));
-    });
+    del([staticDir + 'css/*', '!' + staticDir + 'css/lib'], {force: true});
 
     // compile sass and copy
     return gulp.src('./sass/**/*.scss')
@@ -114,20 +108,16 @@ gulp.task('sassw', function() {
 // typescript compile
 gulp.task('tsc', function() {
     // clean src dest
-    del([staticDir + 'app/**/*.js'], {force: true}).then(paths => {
-        console.log('Deleted files and folders:\n', paths.join('\n'));
-    });
+    del([staticDir + 'app/**/*.js'], {force: true});
 
     // clean test dest
-    del([staticDir + 'jasmine/**/*.js'], {force: true}).then(paths => {
-        console.log('Deleted files and folders:\n', paths.join('\n'));
-    });
+    del([staticDir + 'jasmine/**/*.js'], {force: true});
 
     // compile typescript
     var tsResult = tsProject.src().pipe(ts(tsProject));
 
     // copy
-	  return tsResult.js.pipe(gulp.dest(staticDir));
+    return tsResult.js.pipe(gulp.dest(staticDir));
 });
 
 // typescript watch compile
