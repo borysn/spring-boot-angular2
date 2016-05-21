@@ -1,13 +1,13 @@
 'use strict';
 
 import {Component} from '@angular/core';
-import {RouterLink, RouteParams} from '@angular/router-deprecated';
+import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     selector: 'home',
     templateUrl: 'app/home/home.component.html',
-    directives: [RouterLink]
+    directives: [ROUTER_DIRECTIVES]
 })
 export class HomeComponent {
-    constructor(private routeParams: RouteParams) {}
+    constructor() {}
 }
