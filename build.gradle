@@ -33,7 +33,7 @@ eclipse {
 idea {
     module {
         inheritOutputDirs = false
-        outputDir = file('$buildDir/classes/main/')
+        outputDir = file("${buildDir}/classes/main/")
     }
 }
 
@@ -62,7 +62,7 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-def generatedWebResources = "$buildDir/generated-web-resources"
+def generatedWebResources = "${buildDir}/generated-web-resources"
 
 sourceSets {
 	main {
@@ -75,7 +75,7 @@ node {
 	version = '6.1.0'
 	npmVersion = '3.9.0'
 	download = true
-	workDir = file("$project.projectDir}/src/main/web/node")
+	workDir = file("${project.projectDir}/src/main/web/node")
 	nodeModulesDir = file("${project.projectDir}/src/main/web")
 }
 
