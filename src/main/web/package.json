@@ -36,14 +36,15 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "concurrently": "^2.1.0",
+    "del": "2.2.0",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.1",
     "gulp-autoprefixer": "3.1.0",
     "gulp-sass": "^2.3.1",
     "gulp-typescript": "2.13.4",
-    "del": "2.2.0",
     "jasmine-core": "2.4.1",
-    "concurrently": "^2.1.0",
-    "lite-server": "^2.2.0"
+    "lite-server": "^2.2.0",
+    "typings": "^1.0.4"
   }
 }
