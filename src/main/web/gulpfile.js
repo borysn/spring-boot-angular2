@@ -16,11 +16,13 @@ gulp.task('libcopy', function() {
    del.sync([staticDir + 'js/lib/**',
              staticDir + 'css/lib/**'], {force: true});
 
-    // copy @angular, angular2-in-memory-web-api, and rxjs
+    // copy libs
     gulp.src(['./node_modules/@angular/**/*'])
         .pipe(gulp.dest(staticDir + 'js/lib/@angular'));
     gulp.src(['./node_modules/angular2-in-memory-web-api/**/*'])
         .pipe(gulp.dest(staticDir + 'js/lib/angular2-in-memory-web-api'));
+    gulp.src(['./node_modules/symbol-observable/**/*'])
+        .pipe(gulp.dest(staticDir + 'js/lib/symbol-observable'));
     gulp.src(['./node_modules/rxjs/**/*'])
         .pipe(gulp.dest(staticDir + 'js/lib/rxjs'));
 
