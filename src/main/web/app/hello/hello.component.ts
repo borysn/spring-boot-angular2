@@ -13,16 +13,29 @@ import {HelloService} from './hello.service';
 })
 export class HelloComponent {
 
+    // vars
     private jsonResponse: string;
     private message: string;
+    private subscription;
 
+    // constructor
     constructor(private helloService: HelloService) {}
 
+    // on-init
     ngOnInit() {
-        this.helloService.getTest().subscribe(
-            data => {this.jsonResponse = JSON.stringify(data),
-                     this.message = data.test.message},
-            () => console.log('../test/get/json returned: \n' + this.jsonResponse)
+        // save subscription
+        this.subscription = this.helloService.getTest()
+            .subscribe(
+                (data) => {this.jsonResponse = JSON.stringify(data);
+                         this.message = data.test.message;},
+                (err) => console.log(err),
+                () => console.log('hello service test complete')
         );
+    }
+
+    // on-destroy
+    ngOnDestroy() {
+        // unsubscribe
+        this.subscription.unsubscribe();
     }
 }
