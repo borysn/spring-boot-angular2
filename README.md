@@ -3,6 +3,8 @@
 
 # spring-boot-angular2 starter kit
 
+[![Join the chat at https://gitter.im/borysn/spring-boot-angular2](https://badges.gitter.im/borysn/spring-boot-angular2.svg)](https://gitter.im/borysn/spring-boot-angular2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Spring Boot with Angular2, Bootstrap4, TypeScript, Sass, Gradle, and Gulp.
 
 ## about
