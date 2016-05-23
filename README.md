@@ -43,5 +43,8 @@ check out my [RVEP](https://gitlab.com/borysn/RVEP/tree/dev) project. it's built
 
 if you have any input, or contributions, please share!
 
+## donations
+[donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4NPQ49B5NRV3E&lc=US&item_name=Borys%20Niewiadomski&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted) a cup of coffe
+
 ## license
 [MIT](/LICENSE)
