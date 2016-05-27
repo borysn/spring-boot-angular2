@@ -87,7 +87,7 @@ gulp {
 }
 
 // watch ts, sass, html files for changes and build
-task gulp_watch(type: GulpTask) {
+task gulpWatch(type: GulpTask) {
     args = ['watch']
 }
 
