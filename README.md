@@ -15,6 +15,7 @@
         - ideally, the back-end and front-end client(s) are deployed separately 
     * for the sake of rapid prototyping, there's an opportunity to simplify the build process/dependency mgmt
     * despite separating back-end and front-end on different servers, it will still be possible to packages and ship these together
+    * need a project structure wiki page, and will need to update wiki
     
 # spring-boot-angular2 starter kit
 
