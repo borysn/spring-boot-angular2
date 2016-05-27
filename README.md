@@ -10,7 +10,7 @@
        - no more gulp copy libs
 - possibly getting rid of gulp entirely
     * {sass/tsc transpile, html copy, load libs} all through npm
-- #### notes
+- **notes**
     * restful applications focus on back-end app servers, and front-end clients. this starter-kit should respect restful methodology.
         - ideally, the back-end and front-end client(s) are deployed separately 
     * for the sake of rapid prototyping, there's an opportunity to simplify the build process/dependency mgmt
