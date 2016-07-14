@@ -72,8 +72,8 @@ sourceSets {
 
 // configure gradle-node-plugin
 node {
-	version = '6.2.0'
-	npmVersion = '3.9.2'
+	version = '6.3.0'
+	npmVersion = '3.10.5'
 	download = true
 	workDir = file("${project.projectDir}/src/main/web/node")
 	nodeModulesDir = file("${project.projectDir}/src/main/web")
@@ -93,7 +93,7 @@ task gulpWatch(type: GulpTask) {
 
 // gradle wrapper
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.13'
+	gradleVersion = '2.14'
 }
 
 // clean node/node_modules/typings
