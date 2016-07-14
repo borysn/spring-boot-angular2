@@ -41,18 +41,18 @@ gulp.task('libcopy', function() {
         .pipe(gulp.dest(staticDir + 'css/lib'));
 
     // copy bootstrap dependencies
-    gulp.src(['./node_modules/jquery/dist/jquery.min.js',
-              './node_modules/tether/dist/js/tether.min.js',
-              './node_modules/bootstrap/dist/js/bootstrap.min.js',
-              './node_modules/moment/min/moment.min.js',
-              './node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js'])
+    gulp.src(['./node_modules/jquery/dist/jquery.js',
+              './node_modules/tether/dist/js/tether.js',
+              './node_modules/bootstrap/dist/js/bootstrap.js',
+              './node_modules/moment/moment.js',
+              './node_modules/ng2-bootstrap/bundles/ng2-bootstrap.js'])
         .pipe(gulp.dest(staticDir + 'js/lib'));
-    gulp.src(['./node_modules/tether/dist/css/tether.min.css',
-              './node_modules/bootstrap/dist/css/bootstrap.min.css'])
+    gulp.src(['./node_modules/tether/dist/css/tether.css',
+              './node_modules/bootstrap/dist/css/bootstrap.css'])
         .pipe(gulp.dest(staticDir + 'css/lib'));
 
     // copy font-awesome
-    gulp.src(['./node_modules/font-awesome/css/font-awesome.min.css'])
+    gulp.src(['./node_modules/font-awesome/css/font-awesome.css'])
         .pipe(gulp.dest(staticDir + 'css/lib/font-awesome/css'));
     gulp.src(['./node_modules/font-awesome/fonts/*'])
         .pipe(gulp.dest(staticDir + 'css/lib/font-awesome/fonts'));
