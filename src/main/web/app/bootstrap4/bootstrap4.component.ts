@@ -1,23 +1,18 @@
 'use strict';
 
-import {Component, provide} from '@angular/core';
-import {CORE_DIRECTIVES, NG_VALUE_ACCESSOR} from '@angular/common';
+import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import {FORM_DIRECTIVES, FORM_PROVIDERS, NgModel} from '@angular/forms';
-import {AlertComponent, DATEPICKER_DIRECTIVES, DatePickerComponent} from 'ng2-bootstrap/ng2-bootstrap';
+import {AlertComponent, DATEPICKER_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
     selector: 'bootstrap4',
     templateUrl: 'app/bootstrap4/bootstrap4.component.html',
-    directives: [FORM_DIRECTIVES, CORE_DIRECTIVES, ROUTER_DIRECTIVES,
-                AlertComponent, DATEPICKER_DIRECTIVES],
-    providers: [provide(NG_VALUE_ACCESSOR, {useClass: DatePickerComponent, multi: true}),
-                FORM_PROVIDERS, NgModel]
+    directives: [ROUTER_DIRECTIVES, AlertComponent, DATEPICKER_DIRECTIVES]
 })
 export class Bootstrap4Component {
 
     // date picker
-    public dt:Date = new Date();
+    public date:Date = new Date();
     private minDate:Date = null;
     private events:Array<any>;
     private tomorrow:Date;
@@ -32,6 +27,6 @@ export class Bootstrap4Component {
     private opened:boolean = false;
 
     public getDate():number {
-      return this.dt && this.dt.getTime() || new Date().getTime();
+      return this.date && this.date.getTime() || new Date().getTime();
     }
 }
