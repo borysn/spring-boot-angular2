@@ -4,6 +4,9 @@
 [![bitHound Dev Dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/devDependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
 
 # upcoming changes 
+
+* [sba2-wip repo](https://gitlab.com/borysn/sba2-wip)
+
 - first class npm support
    * separate server run for front-end `localhost:3000`
        - managed through gradle, possibly bootRun or a new runAll
