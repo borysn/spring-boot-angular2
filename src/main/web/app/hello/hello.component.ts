@@ -5,6 +5,11 @@ import {CORE_DIRECTIVES} from '@angular/common';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 import {HelloService} from './hello.service';
 
+interface MessageJson {
+    title: string;
+    message: string;
+}
+
 @Component({
     selector: 'test',
     templateUrl: 'app/hello/hello.component.html',
@@ -15,7 +20,7 @@ export class HelloComponent {
 
     // vars
     private jsonResponse: string;
-    private message: string;
+    private messages: Array<MessageJson>;
     private subscription;
 
     // constructor
@@ -26,8 +31,10 @@ export class HelloComponent {
         // save subscription
         this.subscription = this.helloService.getTest()
             .subscribe(
-                (data) => {this.jsonResponse = JSON.stringify(data);
-                         this.message = data.test.message;},
+                (data) => {
+                    this.jsonResponse = JSON.stringify(data);
+                    this.messages = data;
+                },
                 (err) => console.log(err),
                 () => console.log('hello service test complete')
         );

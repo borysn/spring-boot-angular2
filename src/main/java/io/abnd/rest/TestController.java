@@ -1,13 +1,14 @@
 package io.abnd.rest;
 
+import io.abnd.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.google.gson.JsonObject;
 
 import io.abnd.service.intf.TestService;
+
+import java.util.List;
 
 @RestController
 public class TestController {
@@ -16,15 +17,7 @@ public class TestController {
 	private TestService testService;
 
 	@RequestMapping(value="/test/get/json", method=RequestMethod.GET, produces="application/json")
-	public String testGetJson() {
-		JsonObject jsonObject = new JsonObject();
-		JsonObject message = new JsonObject();
-
-		String result = testService.test();
-
-		message.addProperty("message", result);
-		jsonObject.add("test", message);
-
-		return jsonObject.toString();
+	public @ResponseBody List<Message> testGetJson() {
+		return this.testService.test();
 	}
 }

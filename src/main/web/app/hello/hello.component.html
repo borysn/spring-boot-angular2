@@ -3,4 +3,7 @@
 </div>
 
 <div><h3>JSON</h3><div>{{jsonResponse}}</div></div>
-<div><h3>message</h3><div>{{message}}</div></div>
+<div *ngFor="let message of messages">
+    <h3>{{message.title}}</h3>
+    <div>{{message.message}}</div>
+</div>
