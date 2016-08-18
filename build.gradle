@@ -93,7 +93,7 @@ task gulpWatch(type: GulpTask) {
 
 // gradle wrapper
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.14'
+	gradleVersion = '3.0'
 }
 
 // clean node/node_modules/typings
