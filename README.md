@@ -1,8 +1,3 @@
-[![Build Status](https://travis-ci.org/borysn/spring-boot-angular2.svg?branch=master)](https://travis-ci.org/borysn/spring-boot-angular2)
-[![Gitter](https://badges.gitter.im/borysn/spring-boot-angular2.svg)](https://gitter.im/borysn/spring-boot-angular2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![bitHound Dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/dependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/devDependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
-    
 # spring-boot-angular2 starter kit
 
 Spring Boot with Angular2, Bootstrap4, TypeScript, Sass, Gradle, and Gulp.
