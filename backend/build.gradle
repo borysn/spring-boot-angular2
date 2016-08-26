@@ -1,0 +1,70 @@
+// backend build.gradle
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		// spring
+		classpath('org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE')
+		classpath('org.springframework:springloaded:1.2.6.RELEASE')
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+repositories {
+	mavenCentral()
+}
+
+eclipse {
+	classpath {
+		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+		 containers('org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8')
+	}
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = file("${buildDir}/classes/main/")
+    }
+}
+
+jar {
+	baseName = 'spring-boot-angular2'
+	version = '1.0.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+	dev
+}
+
+dependencies {
+	// spring
+	compile('org.springframework.boot:spring-boot-starter-web')
+	// google gson
+	compile('com.google.code.gson:gson:2.7')
+
+	// spring dev tools
+	dev('org.springframework.boot:spring-boot-devtools')
+
+	// testing
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+// run spring boot app
+bootRun {
+	//addResources = true
+	classpath = sourceSets.main.runtimeClasspath + configurations.dev
+}
+
+// run all task
+task runAll {}
+runAll.dependsOn(bootRun)

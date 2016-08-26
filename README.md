@@ -16,9 +16,9 @@ Karma testing with jasmine.
 Firstclass npm support, and more!
 
 __todo:__
-- [ ] create new branch for old code (just'n'case anyone wants it)
-- [ ] publish first release with old code
-- [ ] push new changes!
+- [x] create new branch for old code (just'n'case anyone wants it)
+- [x] publish first release with old code
+- [x] push new changes!
 - [ ] create changelog
 - [ ] update readme
 - [ ] wiki updates
