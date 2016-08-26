@@ -7,20 +7,26 @@
 
 * [sba2-wip repo](https://gitlab.com/borysn/sba2-wip)
 
-- first class npm support
-   * separate server run for front-end `localhost:3000`
-       - managed through gradle, possibly bootRun or a new runAll
-   * browser loading node modules
-       - moving towards jspm or webpack
-       - no more gulp copy libs
-- possibly getting rid of gulp entirely
-    * {sass/tsc transpile, html copy, load libs} all through npm
-- **notes**
-    * restful applications focus on back-end app servers, and front-end clients. this starter-kit should respect restful methodology.
-        - ideally, the back-end and front-end client(s) are deployed separately 
-    * for the sake of rapid prototyping, there's an opportunity to simplify the build process/dependency mgmt
-    * despite separating back-end and front-end on different servers, it will still be possible to packages and ship these together
-    * need a project structure wiki page, and will need to update wiki
+Changes coming later today! Large commit (no regrets).
+
+Migration to webpack is complete.
+
+Karma testing with jasmine.
+
+Firstclass npm support, and more!
+
+__todo:__
+- [ ] create new branch for old code (just'n'case anyone wants it)
+- [ ] publish first release with old code
+- [ ] push new changes!
+- [ ] create changelog
+- [ ] update readme
+- [ ] wiki updates
+    -  [ ]  add project structure page
+    -  [ ]  update dependencies page
+    -  [ ]  backend run vs frontend run
+    -  [ ]  backend dev vs frontend dev
+    -  [ ]  update config page
     
 # spring-boot-angular2 starter kit
 
