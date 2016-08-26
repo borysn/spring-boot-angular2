@@ -2,7 +2,7 @@
   "name": "spring-boot-angular2",
   "description": "Spring Boot with Angular2, Typescript, Sass, and a Gulp Build",
   "private": true,
-  "version": "0.0.1-SNAPSHOT",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
