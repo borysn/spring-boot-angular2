@@ -2,31 +2,6 @@
 [![Gitter](https://badges.gitter.im/borysn/spring-boot-angular2.svg)](https://gitter.im/borysn/spring-boot-angular2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![bitHound Dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/dependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/devDependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
-
-# upcoming changes 
-
-* [sba2-wip repo](https://gitlab.com/borysn/sba2-wip)
-
-Changes coming later today! Large commit (no regrets).
-
-Migration to webpack is complete.
-
-Karma testing with jasmine.
-
-Firstclass npm support, and more!
-
-__todo:__
-- [ ] create new branch for old code (just'n'case anyone wants it)
-- [ ] publish first release with old code
-- [ ] push new changes!
-- [ ] create changelog
-- [ ] update readme
-- [ ] wiki updates
-    -  [ ]  add project structure page
-    -  [ ]  update dependencies page
-    -  [ ]  backend run vs frontend run
-    -  [ ]  backend dev vs frontend dev
-    -  [ ]  update config page
     
 # spring-boot-angular2 starter kit
 
