@@ -13,6 +13,7 @@ interface MessageJson {
 @Component({
     selector: 'test',
     templateUrl: 'hello.component.html',
+    styleUrls: ['hello.scss'],
     providers: [HelloService],
     directives: [CORE_DIRECTIVES, ROUTER_DIRECTIVES]
 })

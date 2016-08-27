@@ -7,6 +7,7 @@ import { AlertComponent, DATEPICKER_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstr
 @Component({
     selector: 'bootstrap4',
     templateUrl: 'bootstrap4.component.html',
+    styleUrls: ['bootstrap4.scss'],
     directives: [ROUTER_DIRECTIVES, AlertComponent, DATEPICKER_DIRECTIVES]
 })
 export class Bootstrap4Component {
