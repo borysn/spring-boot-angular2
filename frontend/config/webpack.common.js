@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const helpers = require('./helpers');
@@ -51,9 +52,9 @@ module.exports = {
 
             {
                 test: /\.scss$/,
-                loaders: ['raw-loader', 'sass-loader']
+                loaders: ['raw-loader', 'sass-loader'],
+                exclude: [helpers.root('node_modules')]
             },
-
 
             {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -88,6 +89,11 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['app', 'vendor', 'polyfills']
         }),
+
+        new CopyWebpackPlugin([{
+          from: 'src/assets',
+          to: 'assets'
+        }]),
 
         new HtmlWebpackPlugin({
             template: 'src/index.html',
