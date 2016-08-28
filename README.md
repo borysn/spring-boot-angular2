@@ -53,4 +53,4 @@ if you have any input, or contributions, please share!
 [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4npq49b5nrv3e&lc=us&item_name=borys%20niewiadomski&currency_code=usd&bn=pp%2ddonationsbf%3abtn_donate_lg%2egif%3anonhosted) a cup of coffe
 
 ## license
-[MIT](/license)
+[MIT](/LICENSE)
