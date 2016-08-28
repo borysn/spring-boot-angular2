@@ -7,6 +7,4 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     styleUrls: ['home.scss'],
     directives: [ROUTER_DIRECTIVES]
 })
-export class HomeComponent {
-    constructor() {}
-}
+export class HomeComponent {}

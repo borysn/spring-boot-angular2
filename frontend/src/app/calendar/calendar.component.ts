@@ -12,13 +12,13 @@ export class CalendarComponent {
 
     // date picker
     public date:Date = new Date();
-    private minDate:Date = null;
-    private events:Array<any>;
-    private tomorrow:Date;
-    private afterTomorrow:Date;
-    private formats:Array<string> = ['DD-MM-YYYY', 'YYYY/MM/DD', 'DD.MM.YYYY', 'shortDate'];
-    private format = this.formats[0];
-    private dateOptions:any = {
+    private _minDate:Date = null;
+    private _events:Array<any>;
+    private _tomorrow:Date;
+    private _afterTomorrow:Date;
+    private _formats:Array<string> = ['DD-MM-YYYY', 'YYYY/MM/DD', 'DD.MM.YYYY', 'shortDate'];
+    private _format = this._formats[0];
+    private _dateOptions:any = {
       formatYear: 'YY',
       startingDay: 1
     };

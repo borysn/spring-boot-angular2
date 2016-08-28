@@ -18,17 +18,17 @@ interface MessageJson {
 export class HelloComponent {
 
     // vars
-    private jsonResponse: string;
-    private messages: Array<MessageJson>;
-    private subscription;
+    public jsonResponse: string;
+    public messages: Array<MessageJson>;
+    private _subscription;
 
     // constructor
-    constructor(private helloService: HelloService) {}
+    constructor(private _helloService: HelloService) {}
 
     // on-init
     ngOnInit() {
-        // save subscription
-        this.subscription = this.helloService.getTest()
+        // save _subscription
+        this._subscription = this._helloService.getTest()
             .subscribe(
                 (data) => {
                     this.jsonResponse = JSON.stringify(data);
@@ -42,6 +42,6 @@ export class HelloComponent {
     // on-destroy
     ngOnDestroy() {
         // unsubscribe
-        this.subscription.unsubscribe();
+        this._subscription.unsubscribe();
     }
 }
