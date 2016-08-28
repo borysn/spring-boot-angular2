@@ -1,12 +1,12 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
 import { HelloComponent } from './hello/hello.component';
-import { Bootstrap4Component } from './bootstrap4/bootstrap4.component';
+import { CalendarComponent } from './calendar/calendar.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: RouterConfig = [
     {path: '', component: HomeComponent},
-    {path: 'bootstrap4', component: Bootstrap4Component},
+    {path: 'calendar', component: CalendarComponent},
     {path: 'hello', component: HelloComponent}
 ];
 

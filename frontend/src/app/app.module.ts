@@ -7,11 +7,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { appRouterProviders } from './app.routes';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
-import { Bootstrap4Component } from './bootstrap4/bootstrap4.component';
+import { CalendarComponent } from './calendar/calendar.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
-    declarations: [AppComponent, HelloComponent, Bootstrap4Component, HomeComponent],
+    declarations: [AppComponent, HelloComponent, CalendarComponent, HomeComponent],
     imports: [BrowserModule, FormsModule, ReactiveFormsModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     providers: [

@@ -5,12 +5,12 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { AlertComponent, DATEPICKER_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
-    selector: 'bootstrap4',
-    templateUrl: 'bootstrap4.component.html',
-    styleUrls: ['bootstrap4.scss'],
+    selector: 'calendar',
+    templateUrl: 'calendar.component.html',
+    styleUrls: ['calendar.scss'],
     directives: [ROUTER_DIRECTIVES, AlertComponent, DATEPICKER_DIRECTIVES]
 })
-export class Bootstrap4Component {
+export class CalendarComponent {
 
     // date picker
     public date:Date = new Date();

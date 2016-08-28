@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="container">
+        <div>
+            <a [routerLink]="['']" class="btn btn-primary">Home Page</a>
+        </div>
+
+        <h2>ng2-bootstrap test</h2>
+        <alert type="info">ng2-bootstrap hello world!</alert>
+        <pre>Selected date is: <em *ngIf="date">{{ getDate() | date:'fullDate'}}</em></pre>
+        <h4>Inline</h4>
+        <div style="display:inline-block; min-height:290px;">
+            <datepicker [(ngModel)]="date" [minDate]="minDate" [showWeeks]="true"></datepicker>
+        </div>
+    </div>
+</div>
