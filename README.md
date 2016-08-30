@@ -47,7 +47,7 @@ check out my **rvep** project. it's built and updated according to this starter 
 
 [rvep | dev_backend](https://github.com/rvep/dev_backend)
 
-[rvep | dev_frontend](https://github.com/rve/dev_frontend)
+[rvep | dev_frontend](https://github.com/rvep/dev_frontend)
 
 ## contribute
 
