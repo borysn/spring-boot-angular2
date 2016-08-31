@@ -13,9 +13,9 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['', '.js', '.ts', '.css', '.scss', '.json', '.html'],
-        root: helpers.root('src'),
-        modulesDirectories: ['node_modules'],
+        modules: [helpers.root('src'), "node_modules"],
+        descriptionFiles: ['package.json'],
+        extensions: ['', '.js', '.ts', '.css', '.scss', '.json', '.html']
     },
 
     module: {
