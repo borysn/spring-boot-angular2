@@ -54,7 +54,7 @@ check out my **rvep** project. it's built and updated according to this starter 
 if you have any input, or contributions, please share!
 
 ## donations
-[donate](https://www.paypal.me/BorysNiewiadomski) a cup of coffe
+[donate](https://www.paypal.me/BorysNiewiadomski) a cup of coffee
 
 ## license
 [MIT](/LICENSE)
