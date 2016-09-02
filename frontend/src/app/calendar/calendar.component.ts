@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
-import { AlertComponent, DATEPICKER_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
     selector: 'calendar',
     templateUrl: 'calendar.component.html',
-    styleUrls: ['calendar.scss'],
-    directives: [ROUTER_DIRECTIVES, AlertComponent, DATEPICKER_DIRECTIVES]
+    styleUrls: ['calendar.scss']
 })
 export class CalendarComponent {
 

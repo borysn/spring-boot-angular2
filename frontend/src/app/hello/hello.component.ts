@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { CORE_DIRECTIVES } from '@angular/common';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HelloService } from './hello.service';
 
 interface MessageJson {
@@ -12,14 +10,13 @@ interface MessageJson {
     selector: 'test',
     templateUrl: 'hello.component.html',
     styleUrls: ['hello.scss'],
-    providers: [HelloService],
-    directives: [CORE_DIRECTIVES, ROUTER_DIRECTIVES]
+    providers: [HelloService]
 })
-export class HelloComponent {
+export class HelloComponent implements OnInit, OnDestroy {
 
     // vars
-    public jsonResponse: string;
-    public messages: Array<MessageJson>;
+    private jsonResponse: string;
+    private messages: Array<MessageJson>;
     private _subscription;
 
     // constructor
