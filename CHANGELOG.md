@@ -34,6 +34,6 @@ contributors: please follow the recommendations outlined at [keepachangelog.com]
 - creatd a [new branch](https://github.com/borysn/spring-boot-angular2/tree/old-version) for the old version just'n'case anyone wanted that code base.
     
 [Unreleased]: https://github.com/borysn/spring-boot-angular2/compare/1.0.2...master
-[1.0.1]: https://github.com/borysn/spring-boot-angular2/compare/1.0.1...1.0.2
+[1.0.2]: https://github.com/borysn/spring-boot-angular2/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/borysn/spring-boot-angular2/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/borysn/spring-boot-angular2/compare/0.1.0...1.0.0
