@@ -11,7 +11,7 @@ dump.rdb
 .gradle/
 bin/
 build/
-npm-debug.log
+npm-debug.log.*
 
 # OS generated files
 .DS_Store
