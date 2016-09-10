@@ -2,10 +2,6 @@ declare var ENV: string;
 declare var HMR: boolean;
 declare var API_URL: string;
 
-declare var jQuery:any;
-
-declare module "*";
-
 interface GlobalEnvironment {
     ENV;
     HMR;
