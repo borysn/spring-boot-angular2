@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.33",
+    "@types/jquery": "^1.10.31",
     "@types/lodash": "4.14.34",
     "@types/node": "^6.0.38",
     "@types/source-map": "^0.1.26",
@@ -65,7 +66,7 @@
     "angular2-template-loader": "^0.5.0",
     "autoprefixer": "^6.4.1",
     "awesome-typescript-loader": "2.2.4",
-    "bootstrap-loader": "^2.0.0-beta.10",
+    "bootstrap-loader": "2.0.0-beta.10",
     "codelyzer": "^0.0.28",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.25.0",
