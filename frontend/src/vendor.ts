@@ -7,11 +7,9 @@ import '@angular/forms';
 import '@angular/http';
 import '@angular/router';
 
-// rxjs
 import 'rxjs';
-
 import 'jquery';
-//import 'bootstrap-loader';
+import 'bootstrap-loader';
 import 'font-awesome-sass-loader';
 import 'lodash';
 
