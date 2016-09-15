@@ -81,6 +81,10 @@ module.exports = {
     postcss: [autoprefixer],
 
     plugins: [
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            __dirname
+        ),
         new ExtractTextPlugin({
             filename: 'css/[name].css',
             disable: false, allChunks: true
