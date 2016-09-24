@@ -1,7 +1,0 @@
-{
-  "ignore": [
-  ],
-  "packageJsonLocation": "src/main/web/package.json",
-  "dependencies": {
-  }
-}
