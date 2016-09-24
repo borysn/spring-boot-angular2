@@ -20,12 +20,11 @@ anuglar2 with es6 support. unit tests with jasmine.
 
 ## install
 
-`$ git clone git@github.com:borysn/spring-boot-angular2`
+`$ git clone git@github.com:borysn/spring-boot-angular2 -b old-version`
 
 ## build & run
 
-* `$ gradle clean build`
-* `$ gradle bootRun`
+* `$ gradle clean build bootRun`
 * using browser, navigate to`localhost:8080`
 
 ## further reading
