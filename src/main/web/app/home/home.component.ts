@@ -1,13 +1,8 @@
-'use strict';
-
-import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'home',
     templateUrl: 'app/home/home.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    styleUrls: ['css/home.css']
 })
-export class HomeComponent {
-    constructor() {}
-}
+export class HomeComponent {}

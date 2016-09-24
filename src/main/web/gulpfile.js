@@ -10,6 +10,20 @@ var tsProject = ts.createProject('tsconfig.json', {typescript: require('typescri
 // vars
 var staticDir = '../../../build/generated-web-resources/static/';
 
+// assets copy
+gulp.task('assetscopy', function() {
+
+  // clean dest using sync
+  del.sync([staticDir + 'img',
+            staticDir + 'css'], {force: true});
+
+  // copy assets
+  gulp.src(['./assets/css/**'])
+      .pipe(gulp.dest(staticDir + 'css'));
+      gulp.src(['./assets/img/**'])
+          .pipe(gulp.dest(staticDir + 'img'));
+});
+
 // lib copy
 gulp.task('libcopy', function() {
    // clean dest using sync
@@ -97,7 +111,7 @@ gulp.task('sass', function() {
     del([staticDir + 'css/*', '!' + staticDir + 'css/lib'], {force: true});
 
     // compile sass and copy
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('./assets/sass/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest(staticDir + 'css'));
 });
@@ -116,7 +130,7 @@ gulp.task('tsc', function() {
     del([staticDir + 'jasmine/**/*.js'], {force: true});
 
     // compile typescript
-    var tsResult = tsProject.src().pipe(ts(tsProject));
+    var tsResult = tsProject.src().pipe(tsProject());
 
     // copy
     return tsResult.js.pipe(gulp.dest(staticDir));
@@ -131,7 +145,7 @@ gulp.task('tscw', function() {
 });
 
 // build sass and ts, copy libs, copy html
-gulp.task('build', ['htmlcopy', 'sass', 'tsc', 'libcopy']);
+gulp.task('build', ['htmlcopy', 'sass', 'tsc', 'assetscopy', 'libcopy']);
 
 // watch sass, ts, and html
 gulp.task('watch', ['build', 'sassw', 'htmlw', 'tscw']);

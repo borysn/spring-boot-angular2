@@ -1,9 +1,5 @@
-'use strict';
-
-import {Component} from '@angular/core';
-import {CORE_DIRECTIVES} from '@angular/common';
-import {ROUTER_DIRECTIVES} from '@angular/router';
-import {HelloService} from './hello.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HelloService } from './hello.service';
 
 interface MessageJson {
     title: string;
@@ -13,23 +9,23 @@ interface MessageJson {
 @Component({
     selector: 'test',
     templateUrl: 'app/hello/hello.component.html',
-    providers: [HelloService],
-    directives: [CORE_DIRECTIVES, ROUTER_DIRECTIVES]
+    styleUrls: ['css/hello.css'],
+    providers: [HelloService]
 })
-export class HelloComponent {
+export class HelloComponent implements OnInit, OnDestroy {
 
     // vars
     private jsonResponse: string;
     private messages: Array<MessageJson>;
-    private subscription;
+    private _subscription;
 
     // constructor
-    constructor(private helloService: HelloService) {}
+    constructor(private _helloService: HelloService) {}
 
     // on-init
     ngOnInit() {
-        // save subscription
-        this.subscription = this.helloService.getTest()
+        // save _subscription
+        this._subscription = this._helloService.getTest()
             .subscribe(
                 (data) => {
                     this.jsonResponse = JSON.stringify(data);
@@ -43,6 +39,6 @@ export class HelloComponent {
     // on-destroy
     ngOnDestroy() {
         // unsubscribe
-        this.subscription.unsubscribe();
+        this._subscription.unsubscribe();
     }
 }

@@ -1,11 +1,11 @@
-'use strict';
-
-import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'spring-boot-angular2',
     template: '<router-outlet></router-outlet>',
-    directives: [ROUTER_DIRECTIVES]
+    styleUrls: ['css/app.css'],
+    encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {}
+export class AppComponent {
+    name = 'spring-boot-angular2';
+}
