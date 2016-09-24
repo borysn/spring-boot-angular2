@@ -20,7 +20,7 @@ anuglar2 with es6 support. unit tests with jasmine.
 
 ## install
 
-`$ git clone git@github.com:borysn/spring-boot-angular2 -b old-version`
+`$ git clone git@github.com:borysn/spring-boot-angular2 -b single-server`
 
 ## build & run
 
@@ -33,14 +33,18 @@ anuglar2 with es6 support. unit tests with jasmine.
 
 ## example
 
-check out my [RVEP](https://gitlab.com/borysn/RVEP/tree/dev) project. it's built and updated according to this starter kit!
+check out my **rvep** project. it's built and updated according to this starter kit!
+
+[rvep | dev_backend](https://github.com/rvep/dev_backend)
+
+[rvep | dev_frontend](https://github.com/rvep/dev_frontend)
 
 ## contribute
 
 if you have any input, or contributions, please share!
 
 ## donations
-[donate](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4NPQ49B5NRV3E&lc=US&item_name=Borys%20Niewiadomski&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted) a cup of coffe
+[donate](https://www.paypal.me/BorysNiewiadomski) a cup of coffee
 
 ## license
 [MIT](/LICENSE)
