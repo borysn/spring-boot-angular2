@@ -32,18 +32,30 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        loader: 'awesome-typescript-loader',
-        query: {
-          compilerOptions: {
-            removeComments: true
-          }
-        },
+        use: [
+          {
+            loader: 'awesome-typescript-loader',
+            query: {
+              sourceMap: false,
+              inlineSourceMap: true,
+              compilerOptions: {
+                removeComments: true
+              }
+            },
+          },
+          'angular2-template-loader'
+        ],
         exclude: [/\.e2e\.ts$/]
       },
       { 
         test: /\.json$/, 
         loader: 'json-loader', 
         exclude: [helpers.root('src/index.html')] 
+      },
+      {
+        test: /\.scss$/,
+        use: ['raw-loader', 'sass-loader'],
+        exclude: [helpers.root('node_modules')]
       },
       { 
         test: /\.css$/, loaders: ['to-string-loader', 'css-loader'], 
@@ -55,7 +67,8 @@ module.exports = {
         exclude: [helpers.root('src/index.html')]
       },
       {
-        test: /\.(js|ts)$/, loader: 'istanbul-instrumenter-loader',
+        test: /\.(js|ts)$/, 
+        loader: 'istanbul-instrumenter-loader',
         include: helpers.root('src'),
         enforce: 'post',
         exclude: [
@@ -79,6 +92,7 @@ module.exports = {
 
     new webpack.LoaderOptionsPlugin({
       options: {
+        debug: false,
         tslint: {
           emitErrors: false,
           failOnHint: false,
