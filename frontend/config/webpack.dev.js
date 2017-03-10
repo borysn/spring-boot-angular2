@@ -1,3 +1,5 @@
+/* webpack.dev.js */
+const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const commonConfig = require('./webpack.common.js');
@@ -13,8 +15,6 @@ const METADATA = webpackMerge(commonConfig.metadata, {
 });
 
 module.exports = webpackMerge(commonConfig, {
-    metadata: METADATA,
-    debug: true,
     devtool: 'cheap-module-eval-source-map',
 
     output: {
@@ -36,6 +36,13 @@ module.exports = webpackMerge(commonConfig, {
                 'HMR': METADATA.HMR
             }
         }),
+        
+        new webpack.LoaderOptionsPlugin({
+          debug: true,
+          options: {
+            metadata: METADATA,
+          }
+        }),
     ],
 
     devServer: {
@@ -50,8 +57,8 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     node: {
-        global: 'window',
-        crypto: 'empty',
+        global: true,
+        crypto: false,
         process: true,
         module: false,
         clearImmediate: false,

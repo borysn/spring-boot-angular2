@@ -1,3 +1,4 @@
+/* karma.conf.js */
 /**
  * @author: @AngularClass
  */
