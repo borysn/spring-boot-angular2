@@ -6,7 +6,7 @@ buildscript {
 	}
 	dependencies {
 		// spring
-		classpath('org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE')
+		classpath('org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE')
 		classpath('org.springframework:springloaded:1.2.6.RELEASE')
 	}
 }
@@ -14,7 +14,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 
 repositories {
 	mavenCentral()
@@ -36,7 +36,7 @@ idea {
 
 jar {
 	baseName = 'spring-boot-angular2'
-	version = '1.0.3'
+	version = '1.0.4'
 }
 
 sourceCompatibility = 1.8
@@ -48,15 +48,15 @@ configurations {
 
 dependencies {
 	// spring
-	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-web:1.5.2.RELEASE')
 	// google gson
-	compile('com.google.code.gson:gson:2.7')
+	compile('com.google.code.gson:gson:2.8.0')
 
 	// spring dev tools
-	dev('org.springframework.boot:spring-boot-devtools')
+	dev('org.springframework.boot:spring-boot-devtools:1.5.2.RELASE')
 
 	// testing
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('org.springframework.boot:spring-boot-starter-test:1.5.2.RELASE')
 }
 
 // run spring boot app
