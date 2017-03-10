@@ -53,10 +53,10 @@ dependencies {
 	compile('com.google.code.gson:gson:2.8.0')
 
 	// spring dev tools
-	dev('org.springframework.boot:spring-boot-devtools:1.5.2.RELASE')
+	dev('org.springframework.boot:spring-boot-devtools:1.5.2.RELEASE')
 
 	// testing
-	testCompile('org.springframework.boot:spring-boot-starter-test:1.5.2.RELASE')
+	testCompile('org.springframework.boot:spring-boot-starter-test:1.5.2.RELEASE')
 }
 
 // run spring boot app
