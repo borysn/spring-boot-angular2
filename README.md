@@ -1,5 +1,6 @@
 [![build status](https://travis-ci.org/borysn/spring-boot-angular2.svg?branch=master)](https://travis-ci.org/borysn/spring-boot-angular2)
 [![gitter](https://badges.gitter.im/borysn/spring-boot-angular2.svg)](https://gitter.im/borysn/spring-boot-angular2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![bitHound Overall Score](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/score.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2)
 [![bithound dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/dependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/devDependencies.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/borysn/spring-boot-angular2/badges/code.svg)](https://www.bithound.io/github/borysn/spring-boot-angular2)
