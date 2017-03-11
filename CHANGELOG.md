@@ -4,6 +4,18 @@ all notable changes to this project will be documented in this file. items under
 contributors: please follow the recommendations outlined at [keepachangelog.com](http://keepachangelog.com/). please use the existing headings and styling as a guide, and add a link for the version diff at the bottom of the file. also, please update the `unreleased` link to compare to the latest release version.
 ## [unreleased]
 
+## [1.1.0] - 2017-03-10
+#### project updated to v1.1.0
+- [v1.1.0](https://github.com/borysn/spring-boot-angular2/releases/tag/1.1.0) released
+- package upgrades & updates
+    - [x] upgrade angular to v2.4.9
+    - [x] upgrade webpack to v2 & update config
+    - [x] remove deprecated angular-hmr, replace with @angularclass/hmr
+    - [x] upgrade front/backend dependencies
+    - [x] add postcss fix for bootstrap-loader
+    - [x] upgrade gradle wrapper to v3.4
+    - [x] update tslint.json
+
 ## [1.0.3] - 2016-09-15
 #### project updated to v1.0.3
 - [v1.0.3](https://github.com/borysn/spring-boot-angular2/releases/tag/1.0.3) released
