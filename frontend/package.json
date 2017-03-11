@@ -2,7 +2,7 @@
   "name": "spring-boot-angular2",
   "description": "Spring Boot backend, Angular2 frontend with Webpack, Typescript, Sass, Bootstrap4, Karma, Jasmine",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "scripts": {
     "postinstall": "node scripts/fixBootstrapLoader.js",
