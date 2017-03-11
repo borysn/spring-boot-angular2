@@ -1,21 +1,13 @@
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-
+import { bootloader } from '@angularclass/hmr';
+import { decorateModuleRef } from './app/environment';
 import {AppModule} from './app/app.module';
 
-export function main(initialHmrState?: any): Promise<any> {
-  return platformBrowserDynamic().bootstrapModule(AppModule)
-    .catch(err => console.error(err));
+export function main(): Promise<any> {
+  return platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .then(decorateModuleRef)
+    .catch((err) => console.error(err));
 }
 
-/*
- * Hot Module Reload
- * experimental version by @gdi2290
- */
-if ( ENV === 'development' && HMR === true) {
-  // activate hot module reload
-  let ngHmr = require('angular2-hmr');
-  ngHmr.hotModuleReplacement(main, module);
-} else {
-  // bootstrap when document is ready
-  document.addEventListener('DOMContentLoaded', () => main());
-}
+bootloader(main);

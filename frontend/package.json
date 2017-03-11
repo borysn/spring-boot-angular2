@@ -2,7 +2,7 @@
   "name": "spring-boot-angular2",
   "description": "Spring Boot backend, Angular2 frontend with Webpack, Typescript, Sass, Bootstrap4, Karma, Jasmine",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.0.3",
   "license": "MIT",
   "scripts": {
     "postinstall": "node scripts/fixBootstrapLoader.js",
@@ -63,7 +63,8 @@
     "@types/node": "^7.0.8",
     "@types/source-map": "^0.5.0",
     "@types/webpack": "^2.2.11",
-    "angular2-hmr": "~0.8.1",
+    "@angularclass/hmr": "^1.2.2",
+    "@angularclass/hmr-loader": "^3.0.1",
     "angular2-template-loader": "^0.6.2",
     "autoprefixer": "^6.7.6",
     "awesome-typescript-loader": "3.1.2",
