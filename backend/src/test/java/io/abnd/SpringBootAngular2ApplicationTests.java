@@ -11,6 +11,7 @@ public class SpringBootAngular2ApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		// added comment
 	}
 
 }
